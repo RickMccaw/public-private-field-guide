@@ -28,4 +28,6 @@ Student answers are intentionally stored only in the learner’s browser using l
 
 ## GitHub Pages
 
-The workflow at `.github/workflows/deploy-pages.yml` deploys each push to `main`. After the repository is created, enable **Settings → Pages → Build and deployment → GitHub Actions**. The repository’s `CNAME` file already declares the requested custom hostname; GitHub will show the exact DNS verification status after Pages is enabled.
+The public repository contains a static production build in `docs/`, allowing GitHub Pages to deploy without any server or secret. In the GitHub repository, choose **Settings → Pages → Build and deployment → Deploy from a branch**, then select `main` and `/docs`.
+
+The build includes a `CNAME` file declaring `publicprivate.www.rickmccawley.com`. GitHub will show the exact DNS verification status once Pages is enabled. For future changes, run `GITHUB_ACTIONS=true pnpm build`, replace the contents of `docs/` with `dist/public/`, commit, and push.
