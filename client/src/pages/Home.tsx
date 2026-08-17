@@ -21,38 +21,40 @@ import {
 } from "lucide-react";
 import courseContent from "@/data/courseContent.json";
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}media/${path}`;
+
 const assets = {
-  hero: "/manus-storage/collapse-hero_df72bfe0.png",
-  mark: "/manus-storage/collapse-brand-mark_2483af57.png",
+  hero: assetPath("collapse-hero.png"),
+  mark: assetPath("collapse-brand-mark.png"),
 };
 
 const chapterImages: Record<number, string> = {
-  1: "/manus-storage/01_privacy_is_not_secrecy_997e2da4.png",
-  2: "/manus-storage/02_meta_smart_glasses_144b6c60.png",
-  3: "/manus-storage/03_classroom_without_camera_off_switch_cf9deeff.png",
-  4: "/manus-storage/04_florida_recording_law_744641ab.png",
-  5: "/manus-storage/05_flock_alpr_bd952c25.png",
-  6: "/manus-storage/06_abortion_borders_movement_0c3f26b1.png",
-  7: "/manus-storage/07_tsa_cbp_face_boarding_pass_8044d8f6.png",
-  8: "/manus-storage/08_three_biometric_futures_33501ce5.png",
-  9: "/manus-storage/09_ice_data_brokers_warrant_a521bde2.png",
-  10: "/manus-storage/10_home_is_the_castle_0ac2cfb8.png",
-  11: "/manus-storage/11_first_amendment_sensor_net_7173e28e.png",
-  12: "/manus-storage/12_workplace_panopticon_1cd42e9b.png",
-  13: "/manus-storage/13_connector_problem_c59f46af.png",
-  14: "/manus-storage/14_attorney_client_privilege_fe00db6c.png",
-  15: "/manus-storage/15_ios_permissions_managed_devices_b6215f72.png",
-  16: "/manus-storage/16_location_not_biometrics_a78accd1.png",
-  17: "/manus-storage/17_block_spam_7ebbee3e.png",
-  18: "/manus-storage/18_best_behavior_theory_a5f3f403.png",
-  19: "/manus-storage/19_surveillance_capitalism_3ed68a72.png",
-  20: "/manus-storage/20_biometrics_cannot_rotate_f0ab9dcf.png",
-  21: "/manus-storage/21_europe_vs_us_privacy_architecture_10fee545.png",
-  22: "/manus-storage/22_foia_watchdogs_a9b77eeb.png",
-  23: "/manus-storage/23_failure_matrix_25ccc627.png",
-  24: "/manus-storage/24_what_ai_weaponizes_88a137b1.png",
-  25: "/manus-storage/25_rights_design_agenda_5110bf80.png",
-  26: "/manus-storage/26_student_investigation_lab_4b9546c3.png",
+  1: assetPath("chapter-images/01_privacy_is_not_secrecy.png"),
+  2: assetPath("chapter-images/02_meta_smart_glasses.png"),
+  3: assetPath("chapter-images/03_classroom_without_camera_off_switch.png"),
+  4: assetPath("chapter-images/04_florida_recording_law.png"),
+  5: assetPath("chapter-images/05_flock_alpr.png"),
+  6: assetPath("chapter-images/06_abortion_borders_movement.png"),
+  7: assetPath("chapter-images/07_tsa_cbp_face_boarding_pass.png"),
+  8: assetPath("chapter-images/08_three_biometric_futures.png"),
+  9: assetPath("chapter-images/09_ice_data_brokers_warrant.png"),
+  10: assetPath("chapter-images/10_home_is_the_castle.png"),
+  11: assetPath("chapter-images/11_first_amendment_sensor_net.png"),
+  12: assetPath("chapter-images/12_workplace_panopticon.png"),
+  13: assetPath("chapter-images/13_connector_problem.png"),
+  14: assetPath("chapter-images/14_attorney_client_privilege.png"),
+  15: assetPath("chapter-images/15_ios_permissions_managed_devices.png"),
+  16: assetPath("chapter-images/16_location_not_biometrics.png"),
+  17: assetPath("chapter-images/17_block_spam.png"),
+  18: assetPath("chapter-images/18_best_behavior_theory.png"),
+  19: assetPath("chapter-images/19_surveillance_capitalism.png"),
+  20: assetPath("chapter-images/20_biometrics_cannot_rotate.png"),
+  21: assetPath("chapter-images/21_europe_vs_us_privacy_architecture.png"),
+  22: assetPath("chapter-images/22_foia_watchdogs.png"),
+  23: assetPath("chapter-images/23_failure_matrix.png"),
+  24: assetPath("chapter-images/24_what_ai_weaponizes.png"),
+  25: assetPath("chapter-images/25_rights_design_agenda.png"),
+  26: assetPath("chapter-images/26_student_investigation_lab.png"),
 };
 
 const courseArcs = [

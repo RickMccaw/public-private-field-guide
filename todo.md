@@ -5,3 +5,8 @@
 - [ ] Add local response persistence and a compiled printable/downloadable student-paper export.
 - [ ] Add a citation/resource appendix and a 16-week classroom course-path suggestion.
 - [ ] Verify desktop and mobile reading flows, then save an updated checkpoint.
+- [ ] Inspect the existing deployed-site and GitHub repository state.
+- [ ] Write offline-development and maintenance instructions for future editing.
+- [ ] Create a complete ZIP package that excludes installed dependencies and includes the generated course-content data.
+- [ ] Create a public GitHub repository and push the maintainable source code.
+- [ ] Document the DNS record or platform domain-binding action required for PublicPrivate.www.rickmccawley.com.
