@@ -1,93 +1,114 @@
 /**
- * Design reminder — Field Notes After Dark: editorial photojournalism, ink-blue systems,
- * warm paper reading surfaces, Signal Gold navigation, and an asymmetric field-dossier flow.
+ * Design reminder — Field Notes After Dark classroom reader: a one-page civic dossier with
+ * full transcripts, photographic chapter thresholds, evidence links, and student writing spaces.
  */
+import { jsPDF } from "jspdf";
 import { useEffect, useMemo, useState } from "react";
 import {
   ArrowDown,
-  ArrowUpRight,
+  ArrowLeft,
+  ArrowRight,
+  ArrowUp,
   BookOpen,
-  ChevronRight,
+  ChevronDown,
+  Download,
   FileText,
   Menu,
+  PenLine,
   Search,
   ShieldCheck,
   X,
 } from "lucide-react";
+import courseContent from "@/data/courseContent.json";
 
 const assets = {
   hero: "/manus-storage/collapse-hero_df72bfe0.png",
-  network: "/manus-storage/collapse-chapter-network_5dbde09b.png",
-  civic: "/manus-storage/collapse-civic-action_4cb99735.png",
   mark: "/manus-storage/collapse-brand-mark_2483af57.png",
 };
 
-const chapters = [
-  ["01", "Privacy Is Not Secrecy", "From a glance to a searchable history.", "Foundation"],
-  ["02", "When the Camera Becomes Clothing", "Smart glasses and ambient capture.", "Ambient Capture"],
-  ["03", "The Classroom Without a Camera-Off Switch", "When practice becomes permanent evidence.", "Ambient Capture"],
-  ["04", "Florida Recording Law", "Context, consent, and reasonable expectation.", "Law & Boundaries"],
-  ["05", "When a License Plate Becomes a Life Story", "ALPR networks and retrospective movement.", "Networks & Movement"],
-  ["06", "Abortion, State Borders, and Movement", "When national data ignores legal lines.", "Networks & Movement"],
-  ["07", "The Face Becomes the Boarding Pass", "Airport biometrics and normalized identity checks.", "Biometrics"],
-  ["08", "Three Different Biometric Futures", "World ID, TSA Digital ID, and One ID.", "Biometrics"],
-  ["09", "The Purchase of a Warrant", "ICE, data brokers, and commercial access.", "Power & Enforcement"],
-  ["10", "The Home Is the Castle", "Administrative warrants at the threshold.", "Power & Enforcement"],
-  ["11", "The First Amendment Under a Sensor Net", "Protest, association, and the chilling effect.", "Civic Liberty"],
-  ["12", "The Workplace Panopticon", "AI scoring and the home-office collapse.", "Civic Liberty"],
-  ["13", "The Connector Problem", "AI permissions, indexing, retention, and scope.", "AI & Private Life"],
-  ["14", "Privilege in the Prompt Box", "Confidentiality, counsel, and AI settings.", "AI & Private Life"],
-  ["15", "The Phone as Sensor Platform", "Permissions, MDM, and managed devices.", "AI & Private Life"],
-  ["16", "Location Is Not Biometrics", "Routes can reveal a life without being a fingerprint.", "Networks & Movement"],
-  ["17", "Why You Cannot Simply Block Spam", "Spoofing, cloned voices, and rotating identities.", "AI & Private Life"],
-  ["18", "The “Best Behavior” Theory", "What constant observation makes people stop doing.", "Civic Liberty"],
-  ["19", "When Personal Data Changes the Choice", "Pricing, feeds, and behavioral extraction.", "Commercial Power"],
-  ["20", "The Biometrics You Cannot Rotate", "Why bodily identifiers are uniquely durable.", "Biometrics"],
-  ["21", "Two Different Privacy Architectures", "Europe’s broad rights and America’s patchwork.", "Law & Boundaries"],
-  ["22", "The Flashlight Pointed Back", "FOIA, public records, and watchdog research.", "Evidence & Oversight"],
-  ["23", "The Failure Matrix", "Accuracy is only one way a system can fail.", "Evidence & Oversight"],
-  ["24", "What AI Actually “Weaponizes”", "The removal of friction at administrative scale.", "AI & Private Life"],
-  ["25", "The Rights and Design Agenda", "Rules, architecture, and civic choices.", "Evidence & Oversight"],
-  ["26", "The Student Investigation Lab", "A method for asking better questions of power.", "Evidence & Oversight"],
-] as const;
+const chapterImages: Record<number, string> = {
+  1: "/manus-storage/01_privacy_is_not_secrecy_997e2da4.png",
+  2: "/manus-storage/02_meta_smart_glasses_144b6c60.png",
+  3: "/manus-storage/03_classroom_without_camera_off_switch_cf9deeff.png",
+  4: "/manus-storage/04_florida_recording_law_744641ab.png",
+  5: "/manus-storage/05_flock_alpr_bd952c25.png",
+  6: "/manus-storage/06_abortion_borders_movement_0c3f26b1.png",
+  7: "/manus-storage/07_tsa_cbp_face_boarding_pass_8044d8f6.png",
+  8: "/manus-storage/08_three_biometric_futures_33501ce5.png",
+  9: "/manus-storage/09_ice_data_brokers_warrant_a521bde2.png",
+  10: "/manus-storage/10_home_is_the_castle_0ac2cfb8.png",
+  11: "/manus-storage/11_first_amendment_sensor_net_7173e28e.png",
+  12: "/manus-storage/12_workplace_panopticon_1cd42e9b.png",
+  13: "/manus-storage/13_connector_problem_c59f46af.png",
+  14: "/manus-storage/14_attorney_client_privilege_fe00db6c.png",
+  15: "/manus-storage/15_ios_permissions_managed_devices_b6215f72.png",
+  16: "/manus-storage/16_location_not_biometrics_a78accd1.png",
+  17: "/manus-storage/17_block_spam_7ebbee3e.png",
+  18: "/manus-storage/18_best_behavior_theory_a5f3f403.png",
+  19: "/manus-storage/19_surveillance_capitalism_3ed68a72.png",
+  20: "/manus-storage/20_biometrics_cannot_rotate_f0ab9dcf.png",
+  21: "/manus-storage/21_europe_vs_us_privacy_architecture_10fee545.png",
+  22: "/manus-storage/22_foia_watchdogs_a9b77eeb.png",
+  23: "/manus-storage/23_failure_matrix_25ccc627.png",
+  24: "/manus-storage/24_what_ai_weaponizes_88a137b1.png",
+  25: "/manus-storage/25_rights_design_agenda_5110bf80.png",
+  26: "/manus-storage/26_student_investigation_lab_4b9546c3.png",
+};
 
-const fieldQuestions = [
-  "What is collected?",
-  "Who can search it?",
-  "How long does it persist?",
-  "What can it be joined to?",
-  "Can a person opt out?",
-  "What stands between curiosity and coercion?",
+const courseArcs = [
+  { weeks: "Weeks 01–04", title: "Foundations & ambient capture", chapters: "Ch. 01–06", text: "Privacy, wearables, classrooms, recording context, plate readers, and movement across borders." },
+  { weeks: "Weeks 05–08", title: "Movement, identity & enforcement", chapters: "Ch. 07–12", text: "Airport biometrics, identity systems, data brokers, home entry, protest, and workplace monitoring." },
+  { weeks: "Weeks 09–12", title: "Private systems & AI", chapters: "Ch. 13–18", text: "Connectors, privilege, device controls, navigation, spam, and the ideology of constant observation." },
+  { weeks: "Weeks 13–16", title: "Rights, oversight & investigation", chapters: "Ch. 19–26", text: "Commercial power, biometrics, EU/US models, records requests, failure modes, remedies, and student research." },
 ];
+
+type StudentProfile = { name: string; course: string; instructor: string };
+type AnswerMap = Record<string, string>;
 
 function ApertureMark({ compact = false }: { compact?: boolean }) {
   return (
-    <span className={`relative grid shrink-0 place-items-center rounded-full border-2 border-[#E8A33D] bg-[#091018] ${compact ? "h-11 w-11" : "h-14 w-14"}`} aria-hidden="true">
+    <span className={`relative grid shrink-0 place-items-center rounded-full border-2 border-[#E8A33D] bg-[#091018] ${compact ? "h-10 w-10" : "h-14 w-14"}`} aria-hidden="true">
       <span className="absolute h-[2px] w-[calc(100%+6px)] bg-[#E8A33D]" />
       <span className="h-[38%] w-[38%] rounded-full border border-[#F8F1E5]/80 bg-[#091018]" />
     </span>
   );
 }
 
-function EvidenceBand({ index, label, statement }: { index: string; label: string; statement: string }) {
-  return (
-    <div className="border-y border-[#F8F1E5]/10 bg-[#05090E] text-[#F8F1E5]">
-      <div className="mx-auto flex max-w-[1440px] items-center gap-4 px-5 py-5 md:px-10 lg:px-16">
-        <ApertureMark compact />
-        <span className="font-mono text-[10px] tracking-[0.16em] text-[#E8A33D]">{index}</span>
-        <span className="hidden h-5 w-px bg-[#F8F1E5]/25 sm:block" />
-        <span className="hidden font-mono text-[10px] uppercase tracking-[0.14em] text-[#F8F1E5]/48 sm:block">{label}</span>
-        <p className="ml-auto max-w-2xl text-right font-serif text-xl leading-tight tracking-[-0.02em] md:text-2xl">{statement}</p>
-      </div>
-    </div>
+function renderTextWithLinks(text: string) {
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, index) =>
+    /^https?:\/\//.test(part) ? (
+      <a key={`${part}-${index}`} href={part} target="_blank" rel="noreferrer" className="break-all text-[#B7642E] underline decoration-[#E8A33D]/70 underline-offset-4 hover:text-[#13212E]">
+        {part}
+      </a>
+    ) : (
+      <span key={`${part}-${index}`}>{part}</span>
+    ),
   );
 }
 
 export default function Home() {
   const [progress, setProgress] = useState(0);
+  const [activeChapter, setActiveChapter] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [activeTheme, setActiveTheme] = useState("All chapters");
+  const [answers, setAnswers] = useState<AnswerMap>({});
+  const [profile, setProfile] = useState<StudentProfile>({ name: "", course: "", instructor: "" });
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const savedAnswers = localStorage.getItem("public-private-answer-map");
+    const savedProfile = localStorage.getItem("public-private-student-profile");
+    if (savedAnswers) setAnswers(JSON.parse(savedAnswers));
+    if (savedProfile) setProfile(JSON.parse(savedProfile));
+    setReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    localStorage.setItem("public-private-answer-map", JSON.stringify(answers));
+    localStorage.setItem("public-private-student-profile", JSON.stringify(profile));
+  }, [answers, profile, ready]);
 
   useEffect(() => {
     const updateProgress = () => {
@@ -103,250 +124,115 @@ export default function Home() {
     };
   }, []);
 
-  const themes = useMemo(
-    () => ["All chapters", ...Array.from(new Set(chapters.map((chapter) => chapter[3])))],
-    [],
-  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveChapter(Number(visible.target.getAttribute("data-chapter-number")));
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: [0.05, 0.2, 0.45] },
+    );
+    document.querySelectorAll("[data-chapter-number]").forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, []);
 
+  const responseCount = useMemo(() => Object.values(answers).filter((answer) => answer.trim().length > 0).length, [answers]);
   const filteredChapters = useMemo(() => {
     const normalized = query.toLowerCase().trim();
-    return chapters.filter(([number, title, dek, theme]) => {
-      const matchesTheme = activeTheme === "All chapters" || theme === activeTheme;
-      const matchesSearch = [number, title, dek, theme].join(" ").toLowerCase().includes(normalized);
-      return matchesTheme && matchesSearch;
-    });
-  }, [activeTheme, query]);
+    if (!normalized) return courseContent.chapters;
+    return courseContent.chapters.filter((chapter) => [chapter.title, chapter.subtitle, ...chapter.transcript.map((entry) => entry.text)].join(" ").toLowerCase().includes(normalized));
+  }, [query]);
 
-  const jumpTo = (id: string) => {
+  const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     setMenuOpen(false);
   };
 
+  const updateAnswer = (key: string, value: string) => setAnswers((current) => ({ ...current, [key]: value }));
+
+  const jumpChapter = (chapterNumber: number) => {
+    setActiveChapter(chapterNumber);
+    scrollTo(`chapter-${String(chapterNumber).padStart(2, "0")}`);
+  };
+
+  const exportPaper = () => {
+    const entries = courseContent.chapters.flatMap((chapter) => chapter.questions.map((question, index) => ({ chapter, question, answer: answers[`${chapter.number}-${index}`]?.trim() ?? "" }))).filter((entry) => entry.answer);
+    if (!entries.length) {
+      scrollTo("student-paper");
+      return;
+    }
+    const pdf = new jsPDF({ unit: "pt", format: "letter" });
+    const width = 468;
+    const margin = 72;
+    let y = 78;
+    const addText = (text: string, size: number, weight: "normal" | "bold" = "normal") => {
+      pdf.setFont("times", weight);
+      pdf.setFontSize(size);
+      const lines = pdf.splitTextToSize(text, width) as string[];
+      const lineHeight = size * 1.45;
+      lines.forEach((line) => {
+        if (y > 710) { pdf.addPage(); y = 72; }
+        pdf.text(line, margin, y);
+        y += lineHeight;
+      });
+    };
+    addText("The Collapse of the Public–Private Divide", 18, "bold");
+    addText(profile.name || "Student response portfolio", 12);
+    if (profile.course || profile.instructor) addText([profile.course, profile.instructor].filter(Boolean).join(" • "), 10);
+    addText(`Generated ${new Date().toLocaleDateString()}`, 10);
+    y += 10;
+    entries.forEach(({ chapter, question, answer }) => {
+      addText(`Chapter ${String(chapter.number).padStart(2, "0")} — ${chapter.title.replace(/^\d+\.\s*/, "")}`, 13, "bold");
+      addText(`Prompt: ${question}`, 10, "bold");
+      addText(answer, 11);
+      y += 9;
+    });
+    pdf.addPage();
+    y = 72;
+    addText("Selected sources from the field guide", 14, "bold");
+    courseContent.worksCited.slice(0, 36).forEach((citation) => addText(citation, 9));
+    pdf.save("public-private-student-response-paper.pdf");
+  };
+
+  const currentIndex = Math.max(0, courseContent.chapters.findIndex((chapter) => chapter.number === activeChapter));
+
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#091018] text-[#F8F1E5]">
-      <div className="fixed left-0 top-0 z-[70] h-1 w-full bg-[#E8A33D]/15" aria-hidden="true">
-        <div className="h-full bg-[#E8A33D] transition-[width] duration-150" style={{ width: `${progress}%` }} />
-      </div>
+    <div className="min-h-screen bg-[#091018] pb-16 text-[#F8F1E5]">
+      <div className="fixed left-0 top-0 z-[80] h-1 w-full bg-[#E8A33D]/15" aria-hidden="true"><div className="h-full bg-[#E8A33D] transition-[width] duration-150" style={{ width: `${progress}%` }} /></div>
 
-      <aside className="fixed bottom-8 left-6 z-40 hidden w-12 flex-col items-center gap-5 lg:flex" aria-label="Reading position">
-        <span className="rotate-180 font-mono text-[10px] tracking-[0.2em] text-[#F8F1E5]/50 [writing-mode:vertical-rl]">FIELD GUIDE / 2026</span>
-        <div className="h-24 w-px bg-[#F8F1E5]/20">
-          <div className="w-px bg-[#E8A33D] transition-all duration-150" style={{ height: `${progress}%` }} />
-        </div>
-        <span className="font-mono text-[10px] text-[#E8A33D]">{String(progress).padStart(2, "0")}</span>
-      </aside>
-
-      <header className="sticky top-0 z-50 border-b border-[#F8F1E5]/10 bg-[#091018]/88 backdrop-blur-xl">
-        <div className="mx-auto flex h-18 max-w-[1440px] items-center justify-between px-5 py-3 md:px-10 lg:px-16">
-          <button className="flex items-center gap-3 text-left" onClick={() => jumpTo("top")} aria-label="Return to the beginning">
-            <ApertureMark compact />
-            <span className="hidden leading-none sm:block">
-              <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#E8A33D]">Field Guide</span>
-              <span className="block pt-1 font-serif text-base tracking-tight text-[#F8F1E5]">Public / Private</span>
-            </span>
-          </button>
-
-          <nav className="hidden items-center gap-7 font-mono text-[11px] uppercase tracking-[0.14em] text-[#F8F1E5]/70 md:flex" aria-label="Main navigation">
-            <button className="transition-colors hover:text-[#E8A33D]" onClick={() => jumpTo("thesis")}>The thesis</button>
-            <button className="transition-colors hover:text-[#E8A33D]" onClick={() => jumpTo("chapters")}>26 chapters</button>
-            <button className="transition-colors hover:text-[#E8A33D]" onClick={() => jumpTo("lab")}>Investigation lab</button>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <span className="hidden border-l border-[#F8F1E5]/20 pl-3 font-mono text-[10px] uppercase tracking-[0.14em] text-[#E8A33D] xl:block">Reader / {String(progress).padStart(2, "0")}%</span>
-            <button className="rounded-full border border-[#E8A33D]/45 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[#E8A33D] transition hover:bg-[#E8A33D] hover:text-[#091018] active:scale-[0.97]" onClick={() => jumpTo("chapters")}>
-              Explore the report
-            </button>
+      <header className="sticky top-0 z-50 border-b border-[#F8F1E5]/10 bg-[#091018]/95 backdrop-blur-xl">
+        <div className="mx-auto flex min-h-[76px] max-w-[1600px] items-center gap-3 px-4 py-3 md:px-7 lg:px-10">
+          <button className="flex items-center gap-2 text-left" onClick={() => scrollTo("top")} aria-label="Return to the beginning"><ApertureMark compact /><span className="hidden leading-none sm:block"><span className="block font-mono text-[9px] uppercase tracking-[0.18em] text-[#E8A33D]">Field guide</span><span className="mt-1 block font-serif text-base">Public / Private</span></span></button>
+          <div className="ml-auto hidden min-w-0 items-center gap-3 md:flex">
+            <label className="flex min-w-[180px] items-center gap-2 border-l border-[#F8F1E5]/15 pl-3 font-mono text-[9px] uppercase tracking-[0.13em] text-[#F8F1E5]/50"><ChevronDown size={13} /><select value={activeChapter} onChange={(event) => jumpChapter(Number(event.target.value))} className="w-full appearance-none bg-transparent py-2 text-[#F8F1E5] outline-none"><option className="bg-[#13212E]" value="0">Jump to chapter</option>{courseContent.chapters.map((chapter) => <option className="bg-[#13212E]" key={chapter.number} value={chapter.number}>Ch. {String(chapter.number).padStart(2, "0")} — {chapter.title.replace(/^\d+\.\s*/, "")}</option>)}</select></label>
+            <button className="inline-flex items-center gap-2 border-l border-[#F8F1E5]/15 pl-3 font-mono text-[10px] uppercase tracking-[0.13em] text-[#E8A33D] hover:text-[#F8F1E5]" onClick={() => scrollTo("student-paper")}><PenLine size={14} /> My paper <span className="grid h-5 min-w-5 place-items-center rounded-full bg-[#E8A33D] px-1 text-[9px] text-[#091018]">{responseCount}</span></button>
           </div>
-          <button className="ml-2 grid h-10 w-10 place-items-center md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <button className="ml-auto grid h-10 w-10 place-items-center md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle reading menu">{menuOpen ? <X size={19} /> : <Menu size={19} />}</button>
         </div>
-        {menuOpen && (
-          <div className="border-t border-[#F8F1E5]/10 bg-[#101923] px-5 py-5 md:hidden">
-            <div className="grid gap-4 font-mono text-xs uppercase tracking-[0.14em] text-[#F8F1E5]/75">
-              <button className="text-left" onClick={() => jumpTo("thesis")}>The thesis</button>
-              <button className="text-left" onClick={() => jumpTo("chapters")}>26 chapters</button>
-              <button className="text-left" onClick={() => jumpTo("lab")}>Investigation lab</button>
-            </div>
-          </div>
-        )}
+        {menuOpen && <div className="border-t border-[#F8F1E5]/10 bg-[#13212E] p-4 md:hidden"><label className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[#F8F1E5]/55"><ChevronDown size={14} /><select value={activeChapter} onChange={(event) => jumpChapter(Number(event.target.value))} className="w-full bg-transparent py-2 text-[#F8F1E5] outline-none"><option className="bg-[#13212E]" value="0">Jump to chapter</option>{courseContent.chapters.map((chapter) => <option className="bg-[#13212E]" key={chapter.number} value={chapter.number}>Ch. {String(chapter.number).padStart(2, "0")} — {chapter.title.replace(/^\d+\.\s*/, "")}</option>)}</select></label><button className="mt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-[#E8A33D]" onClick={() => scrollTo("student-paper")}>Open my paper ({responseCount})</button></div>}
       </header>
 
       <main id="top">
-        <section className="relative isolate min-h-[790px] overflow-hidden border-b border-[#F8F1E5]/10 lg:min-h-[830px]">
-          <img src={assets.hero} alt="A person crossing a city street amid accumulating data trails" className="absolute inset-0 h-full w-full object-cover object-center" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,16,24,.96)_0%,rgba(9,16,24,.82)_34%,rgba(9,16,24,.18)_73%,rgba(9,16,24,.35)_100%)]" />
-          <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#091018] via-[#091018]/55 to-transparent" />
-          <div className="relative mx-auto flex min-h-[790px] max-w-[1440px] items-end px-5 pb-16 pt-28 md:px-10 lg:min-h-[830px] lg:px-16 lg:pb-24">
-            <div className="max-w-3xl">
-              <div className="mb-6 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-[#E8A33D]">
-                <span className="h-px w-10 bg-[#E8A33D]" />
-                Investigative research edition / 14 August 2026
-              </div>
-              <h1 className="max-w-4xl font-serif text-6xl leading-[.9] tracking-[-0.06em] text-[#F8F1E5] sm:text-7xl md:text-8xl lg:text-[112px]">
-                The collapse of the <em className="text-[#E8A33D]">public–private</em> divide.
-              </h1>
-              <p className="mt-8 max-w-2xl font-sans text-lg leading-8 text-[#F8F1E5]/80 md:text-xl">
-                Surveillance capitalism, ambient capture, AI fusion, and the erosion of democratic liberty—mapped as a student field guide to the new surveillance state.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <button className="group inline-flex items-center gap-3 rounded-full bg-[#E8A33D] px-5 py-3 font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-[#091018] transition hover:bg-[#F8F1E5] active:scale-[0.97]" onClick={() => jumpTo("chapters")}>
-                  Enter the field guide <ArrowDown size={15} className="transition-transform group-hover:translate-y-0.5" />
-                </button>
-                <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#F8F1E5]/55">26 chapters / 1 central question</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="relative isolate min-h-[670px] overflow-hidden border-b border-[#F8F1E5]/10 md:min-h-[720px]"><img src={assets.hero} alt="A person crossing a city street amid accumulating data trails" className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,16,24,.96)_0%,rgba(9,16,24,.82)_36%,rgba(9,16,24,.22)_75%,rgba(9,16,24,.42)_100%)]" /><div className="relative mx-auto flex min-h-[670px] max-w-[1600px] items-end px-5 pb-16 pt-28 md:min-h-[720px] md:px-10 lg:px-20"><div className="max-w-4xl"><p className="mb-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-[#E8A33D]"><span className="h-px w-10 bg-[#E8A33D]" /> {courseContent.edition}</p><h1 className="font-serif text-6xl leading-[.88] tracking-[-.065em] sm:text-7xl md:text-8xl lg:text-[110px]">The collapse of the <em className="text-[#E8A33D]">public–private</em> divide.</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-[#F8F1E5]/76">A complete, chapter-by-chapter classroom reader with primary research text, visual thresholds, source links, and a writing portfolio for every question the field guide raises.</p><div className="mt-9 flex flex-wrap gap-4"><button className="inline-flex items-center gap-3 rounded-full bg-[#E8A33D] px-5 py-3 font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-[#091018] transition hover:bg-[#F8F1E5] active:scale-[.97]" onClick={() => scrollTo("reader")}>Begin reading <ArrowDown size={15} /></button><button className="inline-flex items-center gap-2 border-b border-[#E8A33D] font-mono text-[10px] uppercase tracking-[0.15em] text-[#E8A33D] hover:text-[#F8F1E5]" onClick={() => scrollTo("student-paper")}>Build a response paper <ArrowRight size={14} /></button></div></div></div></section>
 
-        <EvidenceBand index="01" label="Evidence threshold / core thesis" statement="A camera sees a moment. A system remembers a life." />
+        <section className="border-b border-[#13212E]/15 bg-[#F5EFE4] text-[#13212E]"><div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-14 md:px-10 lg:grid-cols-[.82fr_1.18fr] lg:px-20"><div className="border-l-2 border-[#E8A33D] pl-5"><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#8A5526]">How to use this reader</p><p className="mt-4 font-serif text-3xl leading-tight tracking-[-.035em]">Read the record. Trace the source. Write your response.</p></div><div className="grid gap-px border border-[#13212E]/15 bg-[#13212E]/15 sm:grid-cols-3">{[["01", "Read", "Every section preserves the full chapter transcript."], ["02", "Question", "Prompts sit at the end of each chapter and save in your browser."], ["03", "Synthesize", "Gather answered prompts into a downloadable PDF paper."]].map(([number, label, text]) => <div key={number} className="bg-[#F5EFE4] p-5"><span className="font-mono text-[10px] text-[#8A5526]">{number}</span><p className="mt-6 font-serif text-2xl">{label}</p><p className="mt-2 text-sm leading-6 text-[#13212E]/68">{text}</p></div>)}</div></div></section>
 
-        <section id="thesis" className="relative scroll-mt-20 bg-[#F5EFE4] text-[#13212E]">
-          <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 md:px-10 lg:grid-cols-[.8fr_1.5fr] lg:px-16 lg:py-28">
-            <div className="border-l-2 border-[#E8A33D] pl-5">
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#8A5526]">The central question</p>
-              <p className="mt-4 font-serif text-3xl leading-tight tracking-[-0.03em]">A machine does not merely see. It can remember, identify, connect, infer, predict, and act.</p>
-            </div>
-            <div>
-              <p className="max-w-3xl font-serif text-4xl leading-[1.08] tracking-[-0.045em] sm:text-5xl">
-                “Was I in public?” is no longer the whole privacy question.
-              </p>
-              <p className="mt-7 max-w-3xl text-lg leading-8 text-[#13212E]/78">
-                The paper argues that a thousand innocent public acts can become a persistent dossier when cheap capture, storage, identity matching, data brokerage, and AI inference are fused into one searchable system.
-              </p>
-              <div className="mt-10 grid gap-px overflow-hidden border border-[#13212E]/15 bg-[#13212E]/15 sm:grid-cols-3">
-                {["Capture", "Fuse", "Infer"].map((word, index) => (
-                  <div key={word} className="bg-[#F5EFE4] p-5">
-                    <span className="font-mono text-xs text-[#8A5526]">0{index + 1}</span>
-                    <p className="mt-7 font-serif text-2xl">{word}</p>
-                    <p className="mt-2 text-sm leading-6 text-[#13212E]/65">{index === 0 ? "Ordinary life becomes machine-readable." : index === 1 ? "Separate fragments become one queryable record." : "Patterns become consequential claims about people."}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="bg-[#101923] px-5 py-14 md:px-10 lg:px-20"><div className="mx-auto max-w-[1600px]"><div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end"><div><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#E8A33D]">16-week course path</p><h2 className="mt-3 max-w-3xl font-serif text-4xl leading-[.98] tracking-[-.05em] sm:text-5xl">A seminar rhythm for studying surveillance as infrastructure, law, and design.</h2></div><button className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.14em] text-[#E8A33D] hover:text-[#F8F1E5]" onClick={() => scrollTo("reader")}>Open the complete reader <ArrowRight size={15} /></button></div><div className="mt-10 grid gap-px border border-[#F8F1E5]/12 bg-[#F8F1E5]/12 md:grid-cols-2 xl:grid-cols-4">{courseArcs.map((arc) => <article key={arc.weeks} className="bg-[#101923] p-6"><p className="font-mono text-[10px] uppercase tracking-[.15em] text-[#E8A33D]">{arc.weeks}</p><h3 className="mt-7 font-serif text-2xl leading-tight">{arc.title}</h3><p className="mt-2 font-mono text-[10px] uppercase tracking-[.13em] text-[#F8F1E5]/45">{arc.chapters}</p><p className="mt-5 text-sm leading-6 text-[#F8F1E5]/68">{arc.text}</p></article>)}</div></div></section>
 
-        <section className="relative overflow-hidden bg-[#101923] py-20 text-[#F8F1E5] lg:py-28">
-          <div className="absolute inset-y-0 right-0 w-2/5 bg-[radial-gradient(circle_at_center,rgba(232,163,61,.18),transparent_68%)]" />
-          <div className="relative mx-auto grid max-w-[1440px] gap-12 px-5 md:px-10 lg:grid-cols-[1.1fr_.9fr] lg:px-16">
-            <div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#E8A33D]">The surveillance stack</p>
-              <h2 className="mt-4 max-w-xl font-serif text-5xl leading-[.98] tracking-[-0.05em] sm:text-6xl">The danger is not one device. It is the stack.</h2>
-              <p className="mt-7 max-w-xl text-lg leading-8 text-[#F8F1E5]/70">The report follows the shift from a single sensor to a system that can resolve identity, join databases, search backward, create inference, retain memory, and trigger action.</p>
-              <a href="#chapters" className="mt-9 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[#E8A33D] transition hover:text-[#F8F1E5]">Trace the chapters <ArrowUpRight size={16} /></a>
-            </div>
-            <div className="border-l border-[#F8F1E5]/15 pl-6 sm:pl-10">
-              {fieldQuestions.map((question, index) => (
-                <div key={question} className="group flex items-baseline gap-4 border-b border-[#F8F1E5]/12 py-4 last:border-b-0">
-                  <span className="font-mono text-[11px] text-[#E8A33D]">0{index + 1}</span>
-                  <p className="font-serif text-xl transition-colors group-hover:text-[#E8A33D]">{question}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <section id="reader" className="scroll-mt-20 bg-[#EDE2CD] px-5 py-16 text-[#13212E] md:px-10 lg:px-20"><div className="mx-auto max-w-[1600px]"><div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-end"><div><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#8A5526]">Complete chapter reader</p><h2 className="mt-3 font-serif text-5xl leading-[.94] tracking-[-.055em] sm:text-6xl">The full text, arranged as a navigable field dossier.</h2></div><label className="flex items-center gap-3 border-y border-[#13212E]/20 bg-[#F8F3EA] px-4 py-4 text-[#13212E]/55"><Search size={17} /><input value={query} onChange={(event) => setQuery(event.target.value)} className="w-full bg-transparent font-mono text-[10px] uppercase tracking-[.12em] outline-none placeholder:text-[#13212E]/40" placeholder="Find a chapter, case, law, or key term" /></label></div><div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 border-y border-[#13212E]/15 py-4 font-mono text-[10px] uppercase tracking-[.12em] text-[#13212E]/60"><span className="text-[#8A5526]">Quick anchors:</span>{courseContent.chapters.map((chapter) => <button key={chapter.number} onClick={() => jumpChapter(chapter.number)} className={`hover:text-[#8A5526] ${activeChapter === chapter.number ? "text-[#8A5526] underline decoration-[#E8A33D] underline-offset-4" : ""}`}>{String(chapter.number).padStart(2, "0")}</button>)}</div></div></section>
 
-        <section id="chapters" className="scroll-mt-20 bg-[#F5EFE4] py-20 text-[#13212E] lg:py-28">
-          <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
-            <div className="grid gap-8 lg:grid-cols-[1fr_.75fr] lg:items-end">
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#8A5526]">Research map</p>
-                <h2 className="mt-4 font-serif text-5xl leading-[.96] tracking-[-0.055em] sm:text-6xl">Twenty-six launch points for deeper investigation.</h2>
-              </div>
-              <div className="border-y border-r border-[#13212E]/15 border-l-2 border-l-[#E8A33D] bg-[#FBF7F0] p-5 shadow-[0_16px_40px_rgba(19,33,46,.08)]">
-                <label className="flex items-center gap-3 border-b border-[#13212E]/12 pb-3 text-[#13212E]/55">
-                  <Search size={17} />
-                  <input className="w-full bg-transparent font-mono text-xs uppercase tracking-[0.11em] outline-none placeholder:text-[#13212E]/40" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search chapter, concept, or system" aria-label="Search chapters" />
-                </label>
-                <div className="mt-4 grid grid-cols-2 border-l border-t border-[#13212E]/12 sm:grid-cols-3">
-                  {themes.map((theme) => (
-                    <button key={theme} onClick={() => setActiveTheme(theme)} className={`border-b border-r border-[#13212E]/12 px-3 py-2 text-left font-mono text-[9px] uppercase tracking-[0.12em] transition active:scale-[0.97] ${activeTheme === theme ? "bg-[#13212E] text-[#F8F1E5]" : "bg-[#FBF7F0] text-[#13212E]/70 hover:bg-[#E8A33D]/28"}`}>
-                      {theme}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+        <section className="bg-[#F5EFE4] text-[#13212E]">{filteredChapters.map((chapter) => <article id={chapter.slug} data-chapter-number={chapter.number} key={chapter.number} className="scroll-mt-24 border-b border-[#13212E]/15"><div className="relative isolate min-h-[340px] overflow-hidden bg-[#13212E] md:min-h-[420px]"><img src={chapterImages[chapter.number]} loading={chapter.number > 1 ? "lazy" : "eager"} decoding="async" alt={`Visual metaphor for ${chapter.title.replace(/^\d+\.\s*/, "")}`} className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,16,24,.94)_0%,rgba(9,16,24,.62)_40%,rgba(9,16,24,.12)_78%)]" /><div className="relative mx-auto flex min-h-[340px] max-w-[1600px] items-end px-5 py-10 md:min-h-[420px] md:px-10 lg:px-20"><div className="max-w-4xl text-[#F8F1E5]"><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#E8A33D]">Chapter {String(chapter.number).padStart(2, "0")} / {chapter.citations.length} linked source{chapter.citations.length === 1 ? "" : "s"}</p><h2 className="mt-4 font-serif text-5xl leading-[.93] tracking-[-.055em] sm:text-6xl md:text-7xl">{chapter.title.replace(/^\d+\.\s*/, "")}</h2><p className="mt-4 max-w-2xl text-base leading-7 text-[#F8F1E5]/75">{chapter.subtitle}</p></div></div></div><div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-12 md:px-10 lg:grid-cols-[minmax(0,1fr)_310px] lg:px-20 lg:py-16"><div className="max-w-3xl"><div className="chapter-transcript">{chapter.transcript.map((entry, index) => entry.type === "heading" ? <h3 key={`${entry.text}-${index}`} className="mt-10 font-mono text-[11px] uppercase tracking-[.15em] text-[#8A5526] first:mt-0">{entry.text}</h3> : entry.type === "question" ? null : <p key={`${entry.text}-${index}`} className={`mt-4 text-[17px] leading-8 text-[#13212E]/82 ${entry.text.startsWith("IN PLAIN ENGLISH") ? "border-l-2 border-[#E8A33D] pl-5 font-serif text-2xl leading-8 text-[#13212E]" : ""}`}>{entry.text}</p>)}</div><section className="mt-12 border-t-2 border-[#13212E] pt-7"><div className="flex items-center gap-3"><PenLine size={16} className="text-[#8A5526]" /><p className="font-mono text-[10px] uppercase tracking-[.16em] text-[#8A5526]">Chapter inquiry / saved privately in this browser</p></div><h3 className="mt-3 font-serif text-3xl leading-tight">Write through the questions this chapter forces.</h3><div className="mt-7 space-y-6">{chapter.questions.map((question, index) => { const key = `${chapter.number}-${index}`; return <label key={key} className="block"><span className="block font-serif text-xl leading-7">{question}</span><textarea value={answers[key] ?? ""} onChange={(event) => updateAnswer(key, event.target.value)} rows={4} className="mt-3 w-full resize-y border border-[#13212E]/22 bg-[#FBF7F0] p-4 text-base leading-7 outline-none transition focus:border-[#E8A33D] focus:ring-2 focus:ring-[#E8A33D]/20" placeholder="Draft your response, example, evidence, or question for discussion…" /></label>; })}</div></section></div><aside className="lg:sticky lg:top-28 lg:h-fit"><div className="border-t-2 border-[#E8A33D] bg-[#13212E] p-6 text-[#F8F1E5]"><p className="font-mono text-[10px] uppercase tracking-[.16em] text-[#E8A33D]">Evidence file</p><p className="mt-3 font-serif text-2xl leading-tight">Sources cited in this chapter</p>{chapter.citations.length ? <ol className="mt-6 space-y-4">{chapter.citations.map((citation, index) => <li key={`${citation.url}-${index}`} className="border-t border-[#F8F1E5]/14 pt-4"><p className="font-mono text-[9px] uppercase tracking-[.11em] text-[#F8F1E5]/48">{String(index + 1).padStart(2, "0")}</p><p className="mt-2 text-sm leading-5 text-[#F8F1E5]/77">{citation.label}</p><a href={citation.url} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.12em] text-[#E8A33D] hover:text-[#F8F1E5]">Open source <ArrowRight size={13} /></a></li>)}</ol> : <p className="mt-6 text-sm leading-6 text-[#F8F1E5]/65">This chapter frames a synthesis section. Consult the final reference archive for its broader source trail.</p>}</div><button onClick={() => scrollTo("reader")} className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.14em] text-[#8A5526] hover:text-[#13212E]"><ArrowUp size={13} /> Back to reader index</button></aside></div></article>)}</section>
 
-            <div className="mt-14 grid gap-px overflow-hidden border-y border-[#13212E]/15 bg-[#13212E]/15 md:grid-cols-2 xl:grid-cols-3">
-              {filteredChapters.map(([number, title, dek, theme]) => (
-                <article key={number} className="group min-h-56 bg-[#F5EFE4] p-6 transition hover:bg-[#13212E] hover:text-[#F8F1E5] sm:p-7">
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[12px] text-[#8A5526] transition-colors group-hover:text-[#E8A33D]">{number}</span>
-                    <span className="max-w-28 text-right font-mono text-[9px] uppercase tracking-[0.13em] text-[#13212E]/50 transition-colors group-hover:text-[#F8F1E5]/45">{theme}</span>
-                  </div>
-                  <h3 className="mt-11 max-w-xs font-serif text-2xl leading-[1.05] tracking-[-0.035em]">{title}</h3>
-                  <p className="mt-3 max-w-xs text-sm leading-6 text-[#13212E]/62 transition-colors group-hover:text-[#F8F1E5]/68">{dek}</p>
-                  <div className="mt-6 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.15em] text-[#8A5526] opacity-0 transition group-hover:opacity-100 group-hover:text-[#E8A33D]">Read the issue <ChevronRight size={14} /></div>
-                </article>
-              ))}
-            </div>
-            {filteredChapters.length === 0 && <p className="mt-8 font-serif text-2xl">No chapter matches that search. Try “biometric,” “movement,” or “AI.”</p>}
-          </div>
-        </section>
+        {filteredChapters.length === 0 && <section className="bg-[#F5EFE4] px-5 py-20 text-[#13212E]"><div className="mx-auto max-w-3xl border-l-2 border-[#E8A33D] pl-5"><p className="font-serif text-3xl">No chapter contains that term.</p><button className="mt-4 font-mono text-[10px] uppercase tracking-[.15em] text-[#8A5526]" onClick={() => setQuery("")}>Clear search</button></div></section>}
 
-        <section className="grid bg-[#091018] text-[#F8F1E5] lg:grid-cols-2">
-          <div className="relative min-h-[520px] overflow-hidden">
-            <img src={assets.network} alt="A vehicle route observed across a network of cameras" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#091018] via-[#091018]/10 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-              <span className="font-mono text-[10px] uppercase tracking-[0.17em] text-[#E8A33D]">Field observation / movement</span>
-              <p className="mt-3 max-w-md font-serif text-3xl leading-tight">A local camera can become a national time machine.</p>
-            </div>
-          </div>
-          <div className="flex items-center px-5 py-20 md:px-10 lg:px-16">
-            <div className="max-w-xl">
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#E8A33D]">The legal shift</p>
-              <h2 className="mt-4 font-serif text-5xl leading-[.98] tracking-[-0.05em] sm:text-6xl">The line is moving from a glimpse to a dossier.</h2>
-              <p className="mt-7 text-lg leading-8 text-[#F8F1E5]/70">The report’s recurring test is not whether one fragment exists. It is what changes when fragments can be retained, joined, searched, and converted into inference at continental scale.</p>
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                {["What does the system remember?", "Who can turn a signal into a consequence?"].map((question) => (
-                  <div key={question} className="border-l border-[#E8A33D] pl-4 font-serif text-xl leading-7">{question}</div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <section id="student-paper" className="scroll-mt-24 bg-[#101923] px-5 py-20 md:px-10 lg:px-20"><div className="mx-auto grid max-w-[1600px] gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#E8A33D]">Student paper workspace</p><h2 className="mt-4 font-serif text-5xl leading-[.96] tracking-[-.055em] sm:text-6xl">Your questions become a working paper.</h2><p className="mt-6 max-w-xl text-lg leading-8 text-[#F8F1E5]/70">Your responses remain in this browser while you work. When you are ready, this workspace compiles every completed response and a selected reference section into a clean downloadable PDF.</p><div className="mt-9 border-l border-[#E8A33D] pl-5"><p className="font-mono text-[10px] uppercase tracking-[.14em] text-[#E8A33D]">Progress</p><p className="mt-2 font-serif text-4xl">{responseCount} answered prompt{responseCount === 1 ? "" : "s"}</p></div></div><div className="border border-[#F8F1E5]/15 bg-[#13212E] p-6 md:p-8"><div className="grid gap-4 sm:grid-cols-2"><label className="font-mono text-[9px] uppercase tracking-[.13em] text-[#F8F1E5]/52">Student name<input value={profile.name} onChange={(event) => setProfile((current) => ({ ...current, name: event.target.value }))} className="mt-2 w-full border-b border-[#F8F1E5]/25 bg-transparent py-2 text-base text-[#F8F1E5] outline-none focus:border-[#E8A33D]" placeholder="Your name" /></label><label className="font-mono text-[9px] uppercase tracking-[.13em] text-[#F8F1E5]/52">Course / section<input value={profile.course} onChange={(event) => setProfile((current) => ({ ...current, course: event.target.value }))} className="mt-2 w-full border-b border-[#F8F1E5]/25 bg-transparent py-2 text-base text-[#F8F1E5] outline-none focus:border-[#E8A33D]" placeholder="e.g., Design & Democracy" /></label><label className="font-mono text-[9px] uppercase tracking-[.13em] text-[#F8F1E5]/52 sm:col-span-2">Instructor / facilitator<input value={profile.instructor} onChange={(event) => setProfile((current) => ({ ...current, instructor: event.target.value }))} className="mt-2 w-full border-b border-[#F8F1E5]/25 bg-transparent py-2 text-base text-[#F8F1E5] outline-none focus:border-[#E8A33D]" placeholder="Instructor name" /></label></div><div className="mt-8 border-y border-[#F8F1E5]/12 py-5"><p className="font-mono text-[10px] uppercase tracking-[.14em] text-[#E8A33D]">Ready for export</p><p className="mt-2 text-sm leading-6 text-[#F8F1E5]/68">The PDF will include your answered prompts in reading order plus a selected source appendix from the field guide.</p></div><button disabled={!responseCount} onClick={exportPaper} className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#E8A33D] px-5 py-3 font-mono text-[10px] font-semibold uppercase tracking-[.15em] text-[#091018] transition hover:bg-[#F8F1E5] disabled:cursor-not-allowed disabled:opacity-40 active:scale-[.97]"><Download size={15} /> Download response paper PDF</button>{!responseCount && <p className="mt-3 font-mono text-[9px] uppercase tracking-[.12em] text-[#F8F1E5]/42">Answer at least one question to enable export.</p>}</div></div></section>
 
-        <EvidenceBand index="02" label="Evidence threshold / legal shift" statement="The privacy line is moving from a glimpse to a dossier." />
+        <section id="resources" className="scroll-mt-24 bg-[#F5EFE4] px-5 py-20 text-[#13212E] md:px-10 lg:px-20"><div className="mx-auto max-w-[1600px]"><div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end"><div><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#8A5526]">Reference appendix</p><h2 className="mt-3 font-serif text-5xl leading-[.95] tracking-[-.055em] sm:text-6xl">Sources, systems, and the watchlist.</h2></div><p className="max-w-2xl text-lg leading-8 text-[#13212E]/72">Every linked case-file source remains attached to its chapter. This appendix gathers the source archive from the original document for deeper classroom research.</p></div><div className="mt-12 grid gap-10 lg:grid-cols-2"><div><p className="font-mono text-[10px] uppercase tracking-[.16em] text-[#8A5526]">Cross-system surveillance matrix</p><div className="mt-4 space-y-3 border-l border-[#E8A33D] pl-5">{courseContent.matrix.map((item, index) => <p key={`${item}-${index}`} className={`${index === 0 ? "font-mono text-[10px] uppercase tracking-[.11em] text-[#8A5526]" : "text-sm leading-6 text-[#13212E]/73"}`}>{renderTextWithLinks(item)}</p>)}</div></div><div><p className="font-mono text-[10px] uppercase tracking-[.16em] text-[#8A5526]">2026–2030 watchlist</p><div className="mt-4 space-y-3 border-l border-[#E8A33D] pl-5">{courseContent.watchlist.map((item, index) => <p key={`${item}-${index}`} className={index % 2 === 0 ? "font-serif text-xl leading-7" : "text-sm leading-6 text-[#13212E]/73"}>{renderTextWithLinks(item)}</p>)}</div></div></div><details className="mt-14 border-t-2 border-[#13212E] pt-6"><summary className="cursor-pointer font-serif text-3xl leading-tight">Works cited: {courseContent.worksCited.length} documented sources <span className="ml-2 font-mono text-[10px] uppercase tracking-[.14em] text-[#8A5526]">Open archive</span></summary><ol className="mt-8 grid gap-x-12 gap-y-4 lg:grid-cols-2">{courseContent.worksCited.map((citation, index) => <li key={`${citation}-${index}`} className="border-t border-[#13212E]/12 pt-3 text-sm leading-6 text-[#13212E]/75"><span className="mr-2 font-mono text-[10px] text-[#8A5526]">{String(index + 1).padStart(3, "0")}</span>{renderTextWithLinks(citation)}</li>)}</ol></details></div></section>
 
-        <section id="lab" className="scroll-mt-20 bg-[#EDE2CD] text-[#13212E]">
-          <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 md:px-10 lg:grid-cols-[.95fr_1.05fr] lg:px-16 lg:py-28">
-            <div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#5C351A]">The student investigation lab</p>
-              <h2 className="mt-4 max-w-xl font-serif text-5xl leading-[.98] tracking-[-0.05em] sm:text-6xl">Do not prove fear. Document the system.</h2>
-              <p className="mt-7 max-w-xl text-lg leading-8 text-[#13212E]/75">The point of this field guide is evidence-based inquiry: determine what a system sees, remembers, guesses, shares, and permits—and then decide what protections are proportionate.</p>
-              <button onClick={() => jumpTo("chapters")} className="mt-9 inline-flex items-center gap-3 rounded-full border border-[#13212E] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em] transition hover:bg-[#13212E] hover:text-[#F8F1E5] active:scale-[0.97]">Start with a chapter <BookOpen size={15} /></button>
-            </div>
-            <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-[#13212E]/30">
-              <img src={assets.civic} alt="Students and researchers mapping a surveillance system together" className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#13212E]/82 via-[#13212E]/10 to-transparent" />
-              <div className="absolute bottom-0 p-7 text-[#F8F1E5] md:p-9">
-                <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[#E8A33D]"><FileText size={14} /> Assignment: map one system</div>
-                <p className="mt-3 max-w-md font-serif text-3xl leading-tight">Follow a record from raw signal to final consequence.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer className="bg-[#13212E] px-5 py-12 text-[#F8F1E5] md:px-10 lg:px-16">
-          <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div className="flex items-center gap-3">
-              <ApertureMark />
-              <div>
-                <p className="font-serif text-xl">Public / Private</p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#F8F1E5]/55">A student field guide to surveillance power</p>
-              </div>
-            </div>
-            <div className="max-w-lg md:text-right">
-              <p className="font-sans text-sm leading-6 text-[#F8F1E5]/62">Based on the investigative research edition by Rick McCawley. The site is designed as a civic reading experience: questions first, claims next, evidence always.</p>
-              <button onClick={() => jumpTo("top")} className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[#E8A33D] hover:text-[#F8F1E5]">Return to the top <ArrowUpRight size={14} /></button>
-            </div>
-          </div>
-        </footer>
+        <footer className="bg-[#13212E] px-5 py-12 md:px-10 lg:px-20"><div className="mx-auto flex max-w-[1600px] flex-col justify-between gap-8 md:flex-row md:items-end"><div className="flex items-center gap-3"><ApertureMark /><div><p className="font-serif text-2xl">Public / Private</p><p className="font-mono text-[10px] uppercase tracking-[.15em] text-[#F8F1E5]/55">A one-page classroom field guide</p></div></div><div className="max-w-xl md:text-right"><p className="text-sm leading-6 text-[#F8F1E5]/62">Based on the investigative research edition by Rick McCawley. This reader preserves chapter text, links research sources, and supports student writing without requiring an account.</p><div className="mt-4 flex flex-wrap gap-4 md:justify-end"><button className="font-mono text-[10px] uppercase tracking-[.14em] text-[#E8A33D] hover:text-[#F8F1E5]" onClick={() => scrollTo("reader")}>Chapter index</button><button className="font-mono text-[10px] uppercase tracking-[.14em] text-[#E8A33D] hover:text-[#F8F1E5]" onClick={() => scrollTo("resources")}>Reference appendix</button><button className="font-mono text-[10px] uppercase tracking-[.14em] text-[#E8A33D] hover:text-[#F8F1E5]" onClick={() => scrollTo("top")}>Back to top</button></div></div></div></footer>
       </main>
+
+      <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-[#F8F1E5]/10 bg-[#091018]/95 px-3 py-2 backdrop-blur-xl md:px-6" aria-label="Bottom reader navigation"><div className="mx-auto flex max-w-[880px] items-center justify-between gap-2"><button onClick={() => jumpChapter(Math.max(1, courseContent.chapters[currentIndex - 1]?.number ?? 1))} className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[.12em] text-[#F8F1E5]/65 hover:text-[#E8A33D]"><ArrowLeft size={13} /> Previous</button><button onClick={() => scrollTo("reader")} className="font-mono text-[9px] uppercase tracking-[.12em] text-[#E8A33D]">Contents / {String(activeChapter).padStart(2, "0")}</button><button onClick={() => scrollTo("student-paper")} className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[.12em] text-[#F8F1E5]/65 hover:text-[#E8A33D]">My paper <span className="text-[#E8A33D]">{responseCount}</span></button><button onClick={() => jumpChapter(Math.min(26, courseContent.chapters[currentIndex + 1]?.number ?? 26))} className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[.12em] text-[#F8F1E5]/65 hover:text-[#E8A33D]">Next <ArrowRight size={13} /></button></div></nav>
     </div>
   );
 }

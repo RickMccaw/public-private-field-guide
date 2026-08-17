@@ -1,0 +1,7 @@
+- [ ] Extract the complete source document into structured chapter text, question sets, and source links.
+- [ ] Replace the overview-only chapter grid with an anchored one-page full-text chapter reader.
+- [ ] Add a persistent top chapter navigator and a bottom return-to-navigation control.
+- [ ] Add chapter image headers, headline blocks, transcript text, and end-of-chapter question fields.
+- [ ] Add local response persistence and a compiled printable/downloadable student-paper export.
+- [ ] Add a citation/resource appendix and a 16-week classroom course-path suggestion.
+- [ ] Verify desktop and mobile reading flows, then save an updated checkpoint.

@@ -1,0 +1,2546 @@
+{
+  "reportTitle": "The Collapse of the Public–Private Divide",
+  "reportSubtitle": "Surveillance Capitalism, Ambient Capture, AI Fusion, and the Erosion of Democratic Liberty",
+  "author": "Rick McCawley",
+  "edition": "Investigative research edition • 14 August 2026",
+  "chapters": [
+    {
+      "number": 1,
+      "slug": "chapter-01",
+      "title": "1. PRIVACY IS NOT SECRECY",
+      "subtitle": "The constitutional foundation: from physical trespass to pattern-of-life surveillance",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Privacy does not mean nobody can ever see you. It means that seeing one moment should not automatically give someone a searchable history of your whole life."
+        },
+        {
+          "type": "heading",
+          "text": "THE OLD BARGAIN"
+        },
+        {
+          "type": "paragraph",
+          "text": "Public life once created fragments. A police officer might see a car on one street. A shopkeeper might remember a face. A phone company might hold call records. The practical protection was that these fragments were difficult to assemble. AI eliminates that cost. Once observation becomes machine-readable, every fragment can become a row in a timeline."
+        },
+        {
+          "type": "heading",
+          "text": "THE LEGAL LINE"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Fourth Amendment restricts unreasonable government searches; it does not function as a general ban on private observation. Yet Supreme Court doctrine increasingly recognizes that aggregation matters. In Jones, several justices focused on the revealing power of long-term GPS monitoring. Carpenter held that historical cell-site records receive constitutional protection even when held by a phone company. Chatrie in 2026 strengthened the principle that historical location access can be a search without imposing a simple minimum-duration rule (Jones; Carpenter; Chatrie)."
+        },
+        {
+          "type": "heading",
+          "text": "THE FAILURE POINT"
+        },
+        {
+          "type": "paragraph",
+          "text": "The traditional rule “what happens in public is public” becomes unstable when software can reconstruct worship, politics, medicine, romance, work, protest, and home life from ordinary public movements. The legal system is being forced to distinguish a glance from a dossier."
+        },
+        {
+          "type": "heading",
+          "text": "WHY AI CHANGES THE SCALE"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI turns a database into an interrogable memory. Instead of asking an analyst to inspect millions of records, a user can ask for patterns: every vehicle visiting a clinic, every person near a protest, every route connecting two addresses, or every face repeatedly seen with another face. That is not merely better storage. It is a new investigative capacity."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 1A — United States v. Jones (2012)"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Supreme Court unanimously found a Fourth Amendment search where police physically installed a GPS tracker and monitored a vehicle. The opinions also confronted a deeper problem: precise, comprehensive movement histories can expose political, religious, professional, familial, and intimate associations. This case is a foundation for understanding why aggregated movement data can become more intrusive than any one public sighting. (Jones)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 1B — Carpenter v. United States (2018)"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Court held that obtaining historical cell-site location information was a Fourth Amendment search. The government could not rely on the old idea that information loses all constitutional protection simply because a company holds it. The decision did not answer every digital-surveillance question, but it broke a major assumption of the third-party doctrine. (Carpenter)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 1C — Chatrie v. United States (2026)"
+        },
+        {
+          "type": "paragraph",
+          "text": "In June 2026, the Supreme Court treated government access to historical location information as a search and rejected the idea that constitutional sensitivity appears only after a fixed number of days. The case was remanded on the geofence-warrant questions, leaving major issues unresolved while reinforcing the privacy significance of location history. (Chatrie)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 1A — United States v. Jones (2012)",
+          "url": "https://www.law.cornell.edu/supremecourt/text/10-1259"
+        },
+        {
+          "label": "CASE FILE 1B — Carpenter v. United States (2018)",
+          "url": "https://www.law.cornell.edu/supremecourt/text/16-402"
+        },
+        {
+          "label": "CASE FILE 1C — Chatrie v. United States (2026)",
+          "url": "https://www.law.cornell.edu/supremecourt/text/25-112"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "slug": "chapter-02",
+      "title": "2. META SMART GLASSES: WHEN THE CAMERA BECOMES CLOTHING",
+      "subtitle": "Ambient capture, bystander privacy, face search, social norms, and the vanishing signal that someone is recording",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A phone camera looks like a camera when someone points it at you. Smart glasses can record while the wearer appears to be simply looking."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT IT IS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ray-Ban Meta and similar smart glasses combine ordinary eyewear with cameras, microphones, speakers, networked AI, and hands-free capture. The profound change is not image quality. It is social invisibility. Phones usually require a gesture that announces capture. Glasses make capture compatible with normal eye contact."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT META ITSELF SAYS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta advises wearers to turn the glasses off in sensitive spaces including doctors’ offices, locker rooms, public bathrooms, schools, and houses of worship, and to respect requests not to be recorded. Meta’s supplemental wearable policy says voice interactions can include accidental activations and background sound; text transcripts and audio of Meta AI interactions are stored by default for product improvement unless the user manages those settings. These disclosures matter because bystanders did not click “accept” merely by being nearby. (Meta, “Privacy Settings”; Meta, “Supplemental Privacy Policy”)"
+        },
+        {
+          "type": "heading",
+          "text": "THE CORE ASYMMETRY"
+        },
+        {
+          "type": "paragraph",
+          "text": "The wearer receives utility; the bystander receives risk. A stranger may not know whether the glasses are recording, livestreaming, transcribing, recognizing text, sending an image to AI, or merely functioning as glasses. Even when an indicator light exists, the burden of noticing and interpreting it falls on everyone else."
+        },
+        {
+          "type": "heading",
+          "text": "WHY AI CHANGES THE SCALE"
+        },
+        {
+          "type": "paragraph",
+          "text": "The camera is only the sensor. The larger risk appears when the image is routed through face search, public records, social media, data brokers, and language models. A face can become a query. The I-XRAY demonstration proved that the dangerous capability can be assembled from consumer components even when the glasses themselves do not natively identify strangers."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 2A — Harvard’s I-XRAY demonstration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Harvard students AnhPhu Nguyen and Caine Ardayfio combined Ray-Ban Meta glasses, face-search engines, large language models, and public databases to identify strangers and surface details including names, phone numbers, and home addresses. They did not release the system; the project was intended as a warning about what existing components already make possible. Harvard’s Library Innovation Lab later hosted the creators to discuss the project. (Harvard Library Innovation Lab)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 2B — EFF confirms dormant facial-recognition code, then Meta removes it"
+        },
+        {
+          "type": "paragraph",
+          "text": "In June 2026, EFF reported that its Threat Lab found facial-recognition code in the Meta AI app associated with smart glasses. After public scrutiny, EFF updated its report to say Meta removed the unactivated code. The episode is significant even without proving the feature was turned on: technical capability, product intent, and deployed function can differ, and public oversight may occur only after code ships. (Electronic Frontier Foundation)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 2C — Germany criminal complaint, August 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "On 12 August 2026, digital-rights organization HateAid filed a criminal complaint in Germany against Meta and companies involved in selling the glasses, arguing that their design enables unnoticed recording. German authorities confirmed receipt and preliminary review. The complaint is not a conviction, but it illustrates how European privacy and device-surveillance rules can produce scrutiny beyond U.S. norms. (Reuters)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 2D — Courts begin treating smart glasses like cameras"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 2026, courts increasingly confronted AI glasses as recording devices rather than ordinary eyewear. England and Wales moved to ban Meta-style smart glasses from courtrooms, while U.S. judges have ordered them removed in sensitive proceedings. Courtrooms make the problem obvious: jurors, witnesses, minors, confidential documents, and restricted recording rules collide with a device designed to look normal. (The Guardian)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 2E — From public observation to covert social content"
+        },
+        {
+          "type": "paragraph",
+          "text": "In August 2026, The Guardian documented a Melbourne man who discovered that a stranger wearing Meta smart glasses had secretly photographed him and reported on a University of Sydney study of 350 public Instagram videos recorded with smart glasses. Researchers described how discreet point-of-view capture can be difficult for bystanders to detect and identified troubling patterns involving harassment, especially toward women, as well as abusive comments and risks of doxxing once footage is posted. The same reporting also documented substantial accessibility benefits for blind and low-vision users. That dual use is the policy problem in miniature: a device can expand one person’s independence while simultaneously reducing another person’s ability to know when they are being recorded. (The Guardian)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 2A — Harvard’s I-XRAY demonstration",
+          "url": "https://lil.law.harvard.edu/events/i-xray-lunch/"
+        },
+        {
+          "label": "CASE FILE 2B — EFF confirms dormant facial-recognition code, then Meta removes it",
+          "url": "https://www.eff.org/deeplinks/2026/06/move-fast-surveil-things"
+        },
+        {
+          "label": "CASE FILE 2C — Germany criminal complaint, August 2026",
+          "url": "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/"
+        },
+        {
+          "label": "CASE FILE 2D — Courts begin treating smart glasses like cameras",
+          "url": "https://www.theguardian.com/technology/2026/aug/11/meta-glasses-banned-from-courts-in-england-and-wales"
+        },
+        {
+          "label": "CASE FILE 2E — From public observation to covert social content",
+          "url": "https://www.theguardian.com/technology/2026/aug/08/ai-smartglasses-camera-film-privacy-consent"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "slug": "chapter-03",
+      "title": "3. THE CLASSROOM WITHOUT A CAMERA-OFF SWITCH",
+      "subtitle": "Student recording, consent, disability accommodation, teacher authority, and the creation of permanent social memory",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A classroom works because people are allowed to ask bad questions, make mistakes, and change their minds. Constant recording can turn practice into permanent evidence."
+        },
+        {
+          "type": "heading",
+          "text": "THE EDUCATIONAL HARM"
+        },
+        {
+          "type": "paragraph",
+          "text": "Learning requires experimentation. Students mispronounce words, try half-formed ideas, disclose uncertainty, and sometimes discuss personal experiences. When every exchange can be captured, transcribed, clipped, and reposted, the classroom can become a performance space instead of a learning space."
+        },
+        {
+          "type": "heading",
+          "text": "POLICY IS NOT THE SAME AS CRIMINAL LAW"
+        },
+        {
+          "type": "paragraph",
+          "text": "A school can often establish device and recording rules that are stricter than the criminal wiretap law. A recording may be lawful under general state law yet still violate school policy, testing rules, disability confidentiality, professional ethics, or the rights of other students. Conversely, some students may have approved recording accommodations; those should be designed deliberately rather than converted into permission for ambient social capture."
+        },
+        {
+          "type": "heading",
+          "text": "DESIGN PRINCIPLE"
+        },
+        {
+          "type": "paragraph",
+          "text": "The workable rule is purpose-limited capture: visible permission, a defined educational need, no facial identification of bystanders, no livestreaming, no reposting, and deletion on a clear schedule. Meta’s own guidance to power off in schools is an unusually useful baseline for institutions deciding how to handle wearable cameras."
+        },
+        {
+          "type": "heading",
+          "text": "THE FUTURE QUESTION"
+        },
+        {
+          "type": "paragraph",
+          "text": "When AI can summarize a semester of recorded interactions, the risk is no longer a single embarrassing clip. It is a behavioral model of a student or teacher: political opinions, emotional responses, friendships, attendance, health disclosures, speech patterns, and perceived vulnerabilities."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 3A — Meta’s own sensitive-space guidance"
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta tells smart-glasses wearers to turn devices off in schools and several other sensitive spaces. That does not create a legal rule, but it is strong evidence that even the manufacturer recognizes contexts in which bystander expectations outweigh hands-free convenience. (Meta, “Privacy Settings”)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 3A — Meta’s own sensitive-space guidance",
+          "url": "https://www.meta.com/ai-glasses/privacy/"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "slug": "chapter-04",
+      "title": "4. FLORIDA RECORDING LAW: THE TWO-PARTY-CONSENT MYTH, CORRECTLY STATED",
+      "subtitle": "Florida Statutes §§ 934.02 and 934.03: consent, interception, and reasonable expectations",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Florida is strict about secretly intercepting private conversations. But it is not true that every recording made in public automatically needs every person’s permission."
+        },
+        {
+          "type": "heading",
+          "text": "THE RULE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Florida generally prohibits intentional interception of protected wire, oral, or electronic communications unless a statutory exception applies. For many private conversations, this creates what people commonly call an “all-party” consent rule. The important word, however, is protected."
+        },
+        {
+          "type": "heading",
+          "text": "THE DEFINITION THAT CHANGES EVERYTHING"
+        },
+        {
+          "type": "paragraph",
+          "text": "Florida defines an “oral communication” around a speaker’s justified expectation that the communication is not subject to interception. The statute also excludes certain public-meeting communications. That means context matters: a quiet conversation in a private office is different from loudly speaking in a public plaza. The law cannot be reduced to “Florida is always two-party consent.” (Florida Legislature, §§ 934.02–.03)"
+        },
+        {
+          "type": "heading",
+          "text": "SMART GLASSES PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wearable capture blurs the signal that interception is happening. A phone held up is a social cue. Glasses may not be. In a place with a strong expectation of privacy—a medical office, private meeting, changing area, or confidential classroom conference—the device can create both legal and policy risk. In ordinary public settings, other doctrines such as harassment, stalking, intrusion, biometric law, school/workplace rules, or publication torts may matter more than Florida’s interception statute."
+        },
+        {
+          "type": "heading",
+          "text": "STUDENT TEST"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ask four questions: Was this a communication? Did the speaker reasonably expect it not to be intercepted? Was there consent or another legal exception? What happened after capture—storage, identification, publication, or use to harm someone?"
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "PRIMARY LAW 4A — Florida Statute § 934.03"
+        },
+        {
+          "type": "paragraph",
+          "text": "The statute sets out prohibitions and exceptions for interception and disclosure of wire, oral, and electronic communications. Students should read the statute itself rather than relying on social-media shorthand about “two-party consent.”"
+        },
+        {
+          "type": "heading",
+          "text": "PRIMARY LAW 4B — Florida Statute § 934.02"
+        },
+        {
+          "type": "paragraph",
+          "text": "This definitions section is essential because it ties protected oral communication to an expectation that the communication is not subject to interception under circumstances justifying that expectation."
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "PRIMARY LAW 4A — Florida Statute § 934.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999%2F0934%2FSections%2F0934.03.html"
+        },
+        {
+          "label": "PRIMARY LAW 4B — Florida Statute § 934.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999%2F0934%2FSections%2F0934.02.html"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "slug": "chapter-05",
+      "title": "5. FLOCK SAFETY: WHEN A LICENSE PLATE BECOMES A LIFE STORY",
+      "subtitle": "Automated license plate readers, nationwide sharing, AI search, and warrantless retrospective movement",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A license plate reader can start as a stolen-car tool. A network of them can become a time machine showing where a car has been."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT THE CAMERA COLLECTS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Automated license plate readers photograph vehicles as they pass and can record the plate, time, location, make, model, color, and other characteristics. The civil-liberties issue grows when these observations are retained, pooled, and shared across agencies."
+        },
+        {
+          "type": "heading",
+          "text": "THE NETWORK EFFECT"
+        },
+        {
+          "type": "paragraph",
+          "text": "One camera tells police that a vehicle passed one intersection. Thousands of cameras let an investigator reconstruct movement. Cross-jurisdiction sharing makes local surveillance national. Private cameras can add retail, HOA, or business coverage. Natural-language or attribute search can move the system beyond a known plate toward descriptive searches."
+        },
+        {
+          "type": "heading",
+          "text": "THE WARRANT GAP"
+        },
+        {
+          "type": "paragraph",
+          "text": "No single national rule requires a warrant for every historical ALPR search. EFF, ACLU, and litigants are trying to establish stronger warrant protections by analogy to Carpenter’s recognition of sensitive aggregated location histories. Courts remain a moving frontier."
+        },
+        {
+          "type": "heading",
+          "text": "THE CIVIC FAILURE POINT"
+        },
+        {
+          "type": "paragraph",
+          "text": "The recurring problem is mission creep. A system sold for stolen cars can be queried for abortion investigations, immigration, protest activity, school-residency checks, background checks, and noise complaints. The issue is not whether every such search is illegal. The issue is whether a community knowingly authorized those purposes when it bought the cameras."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 5A — Texas abortion investigation crossed a nationwide camera network"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF obtained records showing a Texas sheriff’s office used Flock data in an abortion investigation and disputed earlier public characterizations that the search was simply about a missing person. Another EFF report documented a search across more than 83,000 cameras. The episode demonstrates how a database built for vehicle crime can be repurposed for reproductive-law enforcement. (Electronic Frontier Foundation)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 5B — Protest searches revealed by audit logs"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF analyzed audit logs showing police searches of Flock data connected to protesters and activists. This matters to the First Amendment because location surveillance can identify who attended demonstrations or associated with political groups even without recording a single slogan. (Electronic Frontier Foundation)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 5C — ICE-linked hotlists"
+        },
+        {
+          "type": "paragraph",
+          "text": "In June 2026 EFF reported that a hotlist used by agencies across the country targeted immigrants on behalf of ICE. Hotlists convert passive observation into real-time alerts: the moment a plate passes a camera, the system can notify an agency. (Electronic Frontier Foundation)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 5D — Retail cameras shared with police"
+        },
+        {
+          "type": "paragraph",
+          "text": "404 Media reported from public records that Home Depot and Lowe’s locations had ways to share Flock camera data with law enforcement. This is the public-private fusion problem in miniature: cameras purchased for private property security can become part of police visibility. (404 Media)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 5E — San Jose constitutional lawsuit"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF and ACLU-Northern California sued San Jose in November 2025, arguing that routine warrantless searches of stored ALPR histories violate the California Constitution. The case is a direct attempt to force judicial review of retrospective movement databases rather than treating them as ordinary plate checks. (Electronic Frontier Foundation)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 5A — Texas abortion investigation crossed a nationwide camera network",
+          "url": "https://www.eff.org/deeplinks/2025/10/flock-safety-and-texas-sheriff-claimed-license-plate-search-was-missing-person-it"
+        },
+        {
+          "label": "CASE FILE 5B — Protest searches revealed by audit logs",
+          "url": "https://www.eff.org/deeplinks/2025/11/how-cops-are-using-flock-safetys-alpr-network-surveil-protesters-and-activists"
+        },
+        {
+          "label": "CASE FILE 5C — ICE-linked hotlists",
+          "url": "https://www.eff.org/deeplinks/2026/06/are-your-local-police-using-flock-safety-alprs-scan-immigrants"
+        },
+        {
+          "label": "CASE FILE 5D — Retail cameras shared with police",
+          "url": "https://www.404media.co/home-depot-and-lowes-share-data-from-hundreds-of-ai-cameras-with-cops/"
+        },
+        {
+          "label": "CASE FILE 5E — San Jose constitutional lawsuit",
+          "url": "https://www.eff.org/press/releases/lawsuit-challenges-san-joses-warrantless-alpr-mass-surveillance"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "slug": "chapter-06",
+      "title": "6. ABORTION, STATE BORDERS, AND THE SURVEILLANCE OF MOVEMENT",
+      "subtitle": "When a patchwork of state laws meets national data infrastructure",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A state border can limit a law. A database does not necessarily stop at the state line."
+        },
+        {
+          "type": "heading",
+          "text": "THE STRUCTURAL PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "After Dobbs, reproductive law became sharply state-dependent. Surveillance networks, however, are designed around interoperability. A plate can be captured in one state and searched from another; a phone can generate location data across all states; data brokers sell national products. This creates a constitutional and federalism problem before any individual prosecution occurs."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT THE TEXAS FLOCK CASE PROVES"
+        },
+        {
+          "type": "paragraph",
+          "text": "The documented Texas search shows that abortion-related law enforcement can reach into nationwide ALPR infrastructure. It does not prove that every person traveling for legal reproductive care is currently tracked or arrestable. It proves that the technical pathway exists and has been used for an abortion investigation."
+        },
+        {
+          "type": "heading",
+          "text": "THE CONSTITUTIONAL QUESTIONS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Future cases may implicate travel, due process, search-and-seizure rules, state shield laws, conflict of laws, and the reach of subpoenas or warrants across borders. The decisive factual issue will often be data provenance: who collected the record, who owns it, where it was stored, under what agreement it was shared, and what legal process preceded the search."
+        },
+        {
+          "type": "heading",
+          "text": "WHY AI MAKES THIS WORSE"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI can identify patterns without a named suspect: repeated visits to a clinic, a route between a residence and a facility, or association among several vehicles. That lowers the cost of turning a broad population into a list of investigative candidates."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 6A — EFF: 83,000-camera abortion search"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF’s May 2025 reporting described a Texas police search spanning a Flock network of more than 83,000 cameras to locate a woman in an abortion-related investigation. It became a national example of how interstate data sharing can defeat local expectations about the purpose of municipal surveillance. (Electronic Frontier Foundation)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 6B — ACLU’s nationwide Flock campaign"
+        },
+        {
+          "type": "paragraph",
+          "text": "By August 2026, the ACLU had made ALPR surveillance a national campaign, arguing that communities should evaluate warrant rules, retention, sharing, federal access, and AI capabilities before allowing local cameras to participate in broader networks. (American Civil Liberties Union)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 6A — EFF: 83,000-camera abortion search",
+          "url": "https://www.eff.org/deeplinks/2025/05/she-got-abortion-so-texas-cop-used-83000-cameras-track-her-down"
+        },
+        {
+          "label": "CASE FILE 6B — ACLU’s nationwide Flock campaign",
+          "url": "https://www.aclu.org/campaigns-initiatives/get-the-flock-out"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "slug": "chapter-07",
+      "title": "7. TSA AND CBP: THE FACE BECOMES THE BOARDING PASS",
+      "subtitle": "Facial comparison, touchless identity, biometric entry–exit, and the meaning of “voluntary”",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  At the airport, your face can now work like an identity document. The question is whether convenience becomes expectation, and expectation becomes requirement."
+        },
+        {
+          "type": "heading",
+          "text": "TSA"
+        },
+        {
+          "type": "paragraph",
+          "text": "TSA’s facial-comparison systems compare a live traveler photo against identification. TSA says travelers using many of its facial-comparison checkpoints may decline the photograph and use alternative identity verification. Its PreCheck Touchless ID program is consent-based and provides an opt-out path. The practical civil-liberties test is whether travelers understand that choice when a camera is the default path. (Transportation Security Administration)"
+        },
+        {
+          "type": "heading",
+          "text": "CBP"
+        },
+        {
+          "type": "paragraph",
+          "text": "CBP uses facial comparison for entry and exit processes and reported in July 2026 that its system had processed hundreds of millions of travelers. CBP says biometric comparison operates in secure systems and publishes retention and privacy policies. For many non-U.S. travelers, federal biometric requirements are broader than for U.S. citizens."
+        },
+        {
+          "type": "heading",
+          "text": "THE NORMALIZATION PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "A face is different from a boarding pass. A boarding pass can be reissued; your facial geometry cannot. When biometric identity spreads across airlines, airports, hotels, financial services, and government, compromise or function creep can follow the person rather than the credential."
+        },
+        {
+          "type": "heading",
+          "text": "THE OVERSIGHT PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "GAO has repeatedly examined federal facial-recognition governance and noted gaps in policies, privacy, and oversight. The important lesson is that accuracy testing is necessary but insufficient: a system can be accurate and still be overbroad, coercive, or repurposed."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 7A — TSA facial-comparison opt-out"
+        },
+        {
+          "type": "paragraph",
+          "text": "TSA states that CAT-2 facial-comparison screens are being updated with clear language telling travelers they may decline the photo and that signage also communicates the option. This is an example where policy design—not just algorithm accuracy—determines whether consent is meaningful. (Transportation Security Administration)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 7B — CBP airport deployment"
+        },
+        {
+          "type": "paragraph",
+          "text": "CBP states that facial comparison is used to process travelers entering the United States at 238 airports, including all 14 preclearance locations. The sheer scale illustrates how biometric identity has shifted from pilot project to transportation infrastructure. (U.S. Customs and Border Protection)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 7C — 2025 biometric entry/exit final rule"
+        },
+        {
+          "type": "paragraph",
+          "text": "DHS announced a final rule in November 2025, effective 26 December 2025, expanding regulatory authority for biometric entry/exit processes for covered non-U.S. travelers. This shows how experimental systems can become permanent through administrative rulemaking. (U.S. Customs and Border Protection)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 7A — TSA facial-comparison opt-out",
+          "url": "https://www.tsa.gov/news/press/factsheets/facial-comparison-technology"
+        },
+        {
+          "label": "CASE FILE 7B — CBP airport deployment",
+          "url": "https://www.cbp.gov/travel/biometrics/environments/airports"
+        },
+        {
+          "label": "CASE FILE 7C — 2025 biometric entry/exit final rule",
+          "url": "https://www.cbp.gov/newsroom/national-media-release/dhs-announces-final-rule-advance-biometric-entry/exit-program"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "slug": "chapter-08",
+      "title": "8. WORLD ID, TSA DIGITAL ID, AND “ONE ID”: THREE DIFFERENT BIOMETRIC FUTURES",
+      "subtitle": "Iris proof-of-human systems should not be confused with U.S. airport face matching",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Three products can all use the word “identity” and still be completely different systems."
+        },
+        {
+          "type": "heading",
+          "text": "WORLD ID"
+        },
+        {
+          "type": "paragraph",
+          "text": "World’s private identity system uses an Orb to verify that a person is a unique human, with iris-based processing at the center of its proof-of-humanity model. World promotes it as privacy-preserving and says users can prove personhood without attaching ordinary identity fields in the same way as a government ID. The project has also faced global regulatory scrutiny over biometric collection."
+        },
+        {
+          "type": "heading",
+          "text": "TSA DIGITAL ID"
+        },
+        {
+          "type": "paragraph",
+          "text": "TSA Digital ID is a U.S. aviation-security program involving digital identity credentials and, in some programs, facial comparison. It is not World ID. TSA’s systems are government transportation systems with their own rules, vendors, and privacy documentation."
+        },
+        {
+          "type": "heading",
+          "text": "IATA ONE ID"
+        },
+        {
+          "type": "paragraph",
+          "text": "IATA’s One ID is an aviation-industry vision for contactless/document-light travel using digital identity and biometric recognition. It is likewise not the World Orb program. The similarity of names can obscure important differences in governance, consent, retention, and purpose."
+        },
+        {
+          "type": "heading",
+          "text": "THE STUDENT RULE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Never write “the airport uses World ID” unless a source identifies the specific airport program and vendor. In biometric reporting, brand names are evidence, not interchangeable vocabulary."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 8A — World ID’s iris-based proof of human"
+        },
+        {
+          "type": "paragraph",
+          "text": "World describes World ID as a system for proving that someone is a unique human, using Orb-based iris verification while attempting to minimize conventional identity disclosure. Its privacy claims should be evaluated against technical documentation and the laws of each country where biometric enrollment occurs. (World)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 8B — IATA One ID"
+        },
+        {
+          "type": "paragraph",
+          "text": "The International Air Transport Association describes One ID as a system intended to streamline passenger processes through digital identity and biometric recognition. It provides a useful contrast: airport “one identity” initiatives are not necessarily connected to the World cryptocurrency-linked identity project. (IATA)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 8A — World ID’s iris-based proof of human",
+          "url": "https://world.org/world-id"
+        },
+        {
+          "label": "CASE FILE 8B — IATA One ID",
+          "url": "https://www.iata.org/en/programs/passenger/one-id/"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "slug": "chapter-09",
+      "title": "9. ICE, DATA BROKERS, AND THE PURCHASE OF A WARRANT",
+      "subtitle": "Commercial location data, facial recognition, phone analytics, Palantir, Medicaid data, and the government–market boundary",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  If police need a warrant to demand some information directly, can an agency avoid the judge by buying similar information from a company?"
+        },
+        {
+          "type": "heading",
+          "text": "THE LOOPHOLE QUESTION"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Constitution constrains government searches; private companies collect vast consumer datasets under contracts and privacy policies. Agencies have increasingly purchased commercial data products that can include precise or sensitive information. Civil-liberties groups call this a data-broker loophole because the government may obtain investigative visibility through purchase rather than compulsory legal process."
+        },
+        {
+          "type": "heading",
+          "text": "THE FUSION MODEL"
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern immigration enforcement can combine commercial phone/location data, facial recognition, plate readers, government benefits data, tax information, social media, device forensics, and identity databases. No single dataset has to reveal everything. The power comes from linking them."
+        },
+        {
+          "type": "heading",
+          "text": "PALANTIR"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF and ACLU have raised alarms about Palantir tools used to help ICE identify, prioritize, and locate people. Palantir has publicly disputed or contextualized parts of the criticism. That disagreement belongs in a rigorous classroom investigation: students should compare what the vendor says the product does, what government contracts authorize, what records show agents actually do, and what courts permit."
+        },
+        {
+          "type": "heading",
+          "text": "THE DEMOCRATIC TEST"
+        },
+        {
+          "type": "paragraph",
+          "text": "The key question is not whether immigration enforcement may investigate. It plainly may within legal authority. The question is whether data collected for healthcare, taxes, retail apps, navigation, or routine commerce should become searchable enforcement infrastructure without a warrant, individualized suspicion, or public debate."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 9A — ACLU: DHS buys data otherwise associated with warrants"
+        },
+        {
+          "type": "paragraph",
+          "text": "In January 2026 the ACLU documented DHS purchases of sensitive commercial data and argued that agencies were circumventing constitutional warrant protections. The dispute is central to pending legislative and judicial debates over government acquisition of brokered data. (American Civil Liberties Union)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 9B — EFF: ICE surveillance shopping spree"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF’s January 2026 inventory described new ICE purchases and contracts for surveillance technologies. The value of the report is the systems view: multiple tools that look narrow by themselves can form a comprehensive investigative stack when combined. (Electronic Frontier Foundation)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 9C — Medicaid data and Palantir"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF reported in January 2026 on an ICE tool fed with Medicaid-related data and warned about consolidation into an AI-searchable interface. Palantir published a response disputing aspects of EFF’s framing. Both documents should be read together to separate contract scope, data flows, product capabilities, and contested claims. (Electronic Frontier Foundation; Palantir)"
+        },
+        {
+          "type": "paragraph",
+          "text": "VENDOR RESPONSE 9D — Palantir corrects the record"
+        },
+        {
+          "type": "paragraph",
+          "text": "Palantir’s public response argues that descriptions of its role and the relevant datasets can be misleading. Including the vendor response is essential investigative practice: surveillance reporting should test adversarial claims rather than substitute advocacy labels for technical evidence. (Palantir)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 9A — ACLU: DHS buys data otherwise associated with warrants",
+          "url": "https://www.aclu.org/news/privacy-technology/dhs-is-circumventing-constitution-by-buying-data-it-would-normally-need-a-warrant-to-access"
+        },
+        {
+          "label": "CASE FILE 9B — EFF: ICE surveillance shopping spree",
+          "url": "https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree"
+        },
+        {
+          "label": "CASE FILE 9C — Medicaid data and Palantir",
+          "url": "https://www.eff.org/deeplinks/2026/01/report-ice-using-palantir-tool-feeds-medicaid-data"
+        },
+        {
+          "label": "CASE FILE 9C — Medicaid data and Palantir",
+          "url": "https://blog.palantir.com/correcting-the-record-response-to-the-eff-january-15-2026-report-on-palantir-4b3a12536cd2"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "slug": "chapter-10",
+      "title": "10. THE HOME IS THE CASTLE—UNTIL AN ADMINISTRATIVE WARRANT REACHES THE DOOR",
+      "subtitle": "ICE home entry, I-205 administrative warrants, judicial warrants, and active constitutional litigation",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A paper signed inside an agency is not the same thing as a search warrant signed by a judge."
+        },
+        {
+          "type": "heading",
+          "text": "THE DISTINCTION"
+        },
+        {
+          "type": "paragraph",
+          "text": "A judicial search or arrest warrant is issued by a court based on legal standards. An immigration administrative warrant is issued within the executive branch. Historically, civil-rights guidance emphasized that an administrative ICE warrant alone did not authorize forced entry into a home without consent."
+        },
+        {
+          "type": "heading",
+          "text": "THE 2025 MEMO"
+        },
+        {
+          "type": "paragraph",
+          "text": "Associated Press reported in January 2026 on a May 2025 ICE directive authorizing officers, under specified conditions, to enter residences using an I-205 administrative warrant to arrest people with final removal orders. The memo represents the agency’s asserted authority; it does not settle the Fourth Amendment question."
+        },
+        {
+          "type": "heading",
+          "text": "THE LAWSUITS"
+        },
+        {
+          "type": "paragraph",
+          "text": "ACLU and other organizations are challenging forced-entry practices, arguing that executive-branch paperwork cannot substitute for a judicial warrant at the home. Reuters reported a January 2026 lawsuit challenging ICE’s authority to enter homes without warrants signed by judges. The litigation is ongoing."
+        },
+        {
+          "type": "heading",
+          "text": "WHY THIS BELONGS IN A SURVEILLANCE REPORT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Surveillance is not only about watching. It is about the chain from information to coercive action. A location hit, database match, plate alert, or data-broker record can ultimately lead agents to a door. The constitutional protections at the door therefore determine how dangerous upstream data aggregation becomes."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 10A — ICE forced-entry memo reported by AP"
+        },
+        {
+          "type": "paragraph",
+          "text": "AP reported that an internal ICE memo authorized forced home entry using administrative warrants for certain final-order cases after specified knock-and-announce procedures. Civil-rights attorneys argue the policy conflicts with longstanding Fourth Amendment doctrine protecting the home. (Associated Press)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 10B — Gibson/Brown v. Mullin"
+        },
+        {
+          "type": "paragraph",
+          "text": "The ACLU’s litigation challenges warrantless or inadequately warranted immigration home entries and seeks judicial limits on federal agents’ ability to enter private residences. The case gives students a live vehicle for studying how constitutional doctrine is tested against an agency’s operational policy. (American Civil Liberties Union)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 10C — Federal lawsuit reported by Reuters"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters reported on 30 January 2026 that a lawsuit challenged ICE’s asserted ability to enter homes without warrants from U.S. judges. It is important to describe this as contested law, not as a settled permission or settled prohibition. (Reuters)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 10A — ICE forced-entry memo reported by AP",
+          "url": "https://apnews.com/article/ice-arrests-warrants-minneapolis-trump-00d0ab0338e82341fd91b160758aeb2d"
+        },
+        {
+          "label": "CASE FILE 10B — Gibson/Brown v. Mullin",
+          "url": "https://www.aclu.org/cases/gibsonbrown-v-mullin"
+        },
+        {
+          "label": "CASE FILE 10C — Federal lawsuit reported by Reuters",
+          "url": "https://www.reuters.com/legal/government/lawsuit-challenges-ice-ability-enter-homes-without-warrants-us-judges-2026-01-30/"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "slug": "chapter-11",
+      "title": "11. THE FIRST AMENDMENT UNDER A SENSOR NET",
+      "subtitle": "Protest, association, journalism, court watching, plate logs, undercover agents, and the chilling effect",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  The government does not have to ban a protest to weaken it. People may stay home if attending creates a permanent government record."
+        },
+        {
+          "type": "heading",
+          "text": "THE CHILLING EFFECT"
+        },
+        {
+          "type": "paragraph",
+          "text": "First Amendment harm often happens before punishment. If citizens believe every protest, meeting, donation, church visit, or court-watch activity will be cataloged and searchable, some will avoid lawful association. Surveillance can therefore alter behavior even when no one is arrested."
+        },
+        {
+          "type": "heading",
+          "text": "OBSERVING GOVERNMENT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Recording police and immigration agents performing public duties can be protected First Amendment activity, subject to reasonable restrictions and the separate prohibition on physically interfering with officers. The hard boundary is increasingly being litigated in immigration operations, where activists use phones and apps to warn communities and agents accuse some observers of interference."
+        },
+        {
+          "type": "heading",
+          "text": "OPERATION PUPPET MASTER"
+        },
+        {
+          "type": "paragraph",
+          "text": "Court filings released in August 2026 revealed a federal undercover operation in Minnesota that infiltrated meetings and monitored progressive groups, labor organizations, and anti-ICE activity. AP reported that some monitored meetings occurred in churches, schools, parks, and libraries and involved discussions of lawful protest. The government framed its work as investigation of conspirators and violent opportunists; defense lawyers and civil-liberties critics describe the operation as politically driven overreach. The facts and legal conclusions remain contested."
+        },
+        {
+          "type": "heading",
+          "text": "AI MULTIPLIER"
+        },
+        {
+          "type": "paragraph",
+          "text": "Undercover reports, license plates, social posts, group chats, payment records, and video can now be fused into relationship graphs. AI makes guilt-by-association easier to operationalize, because the system can generate candidate networks first and leave humans to decide what those connections mean later."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 11A — Operation Puppet Master, August 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "AP reported from court documents that DHS undercover personnel attended meetings in churches, schools, parks, and a library while investigating opposition to the Minneapolis immigration crackdown. Records referenced unions and progressive organizations. The operation is a current test of where legitimate investigation ends and protected association begins. (Associated Press)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 11B — Citizens tracking ICE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters reported in September 2025 that activists were using apps and observation networks to warn migrants about ICE operations. Legal experts told Reuters that observing and sharing information can be lawful so long as people do not physically interfere with enforcement. The government, meanwhile, explored prosecutions in some circumstances. (Reuters)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 11C — Arrests for following ICE vehicles"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters reported in February 2026 on arrests and charges involving people who followed ICE agents in vehicles. Some officials characterized conduct as interference; critics argued that safe-distance observation and protest were protected. The conflict demonstrates why constitutional rights often turn on highly specific facts: distance, obstruction, threats, force, warnings, and officer safety. (Reuters)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 11A — Operation Puppet Master, August 2026",
+          "url": "https://apnews.com/article/5e6e554e79980553c3a02ca199593a7d"
+        },
+        {
+          "label": "CASE FILE 11B — Citizens tracking ICE",
+          "url": "https://www.reuters.com/legal/government/citizens-are-tracking-ice-real-time-warn-migrants-is-that-legal-2025-09-04/"
+        },
+        {
+          "label": "CASE FILE 11C — Arrests for following ICE vehicles",
+          "url": "https://www.reuters.com/world/us/ice-is-cracking-down-people-who-follow-them-their-cars-2026-02-10/"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "slug": "chapter-12",
+      "title": "12. THE WORKPLACE PANOPTICON",
+      "subtitle": "Company laptops, email, keystrokes, screenshots, location, webcams, productivity scores, and the myth of absolute employer power",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  An employer-owned laptop can give the employer broad monitoring power. It does not create a magic exception to every privacy, wiretap, discrimination, or consent law."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT EMPLOYERS CAN OFTEN DO"
+        },
+        {
+          "type": "paragraph",
+          "text": "U.S. employers commonly monitor activity on company systems: email, web usage, application activity, logins, downloads, file access, keystrokes, mouse activity, and sometimes screenshots or location. Employer policies and notice matter greatly. On a corporate account, employees should generally assume business communications can be retained, audited, and produced in litigation."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT “OWNERSHIP” DOES NOT MEAN"
+        },
+        {
+          "type": "paragraph",
+          "text": "Owning the laptop does not automatically authorize every imaginable surveillance practice. Wiretap statutes, state privacy laws, biometric laws, discrimination rules, labor law, tort claims, consent requirements, and the reasonableness of monitoring can constrain conduct. Secretly activating a home webcam or microphone is legally and ethically different from logging access to a corporate file server."
+        },
+        {
+          "type": "heading",
+          "text": "THE AI SHIFT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Traditional bossware counted activity. AI can interpret it. The system may infer distraction, emotion, productivity, intent, risk, or “engagement” from incomplete proxies. Once algorithms turn surveillance into scores, workers may be disciplined not for what a manager witnessed but for what a model inferred."
+        },
+        {
+          "type": "heading",
+          "text": "THE HOME-OFFICE COLLAPSE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Remote work moves employer-controlled sensors into bedrooms, kitchens, and living rooms. The old spatial boundary—workplace on one side, home on the other—no longer maps cleanly onto the device boundary. That makes explicit monitoring policies and hardware indicators more important, not less."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 12A — EPIC workplace surveillance overview"
+        },
+        {
+          "type": "paragraph",
+          "text": "EPIC documents modern “bossware” capabilities including screenshots, monitoring of email and location, and products capable of webcam or microphone access. The existence of a capability is not proof that every use is lawful; it is evidence of what employers can technically purchase. (EPIC)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 12B — Reuters legal analysis, April 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters surveyed U.S. employee-monitoring law in April 2026, describing keystroke, mouse, application, and screen monitoring while emphasizing statutory and state-law limits. The central lesson is broad employer power—not absolute employer power. (Reuters)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 12A — EPIC workplace surveillance overview",
+          "url": "https://epic.org/issues/data-protection/workplace-privacy/"
+        },
+        {
+          "label": "CASE FILE 12B — Reuters legal analysis, April 2026",
+          "url": "https://www.reuters.com/legal/legalindustry/eyes-me-monitoring-way-through-employee-privacy--pracin-2026-04-27/"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "slug": "chapter-13",
+      "title": "13. GMAIL, GEMINI, CHATGPT, PERPLEXITY, AND THE CONNECTOR PROBLEM",
+      "subtitle": "Connected does not mean public: permissions, synced indexes, retention, training, sharing, legal process, and memory",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Giving an AI permission to read your inbox is not the same as publishing your inbox. But it creates a new copy, a new access path, or a new processor that must be understood."
+        },
+        {
+          "type": "heading",
+          "text": "THE FIVE QUESTIONS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Every connector should be analyzed through five separate questions: What may the app read? Does it copy or index the data? How long is that copy retained? Can the data be used for model training or product improvement? Can outputs or shared sessions expose the material to other people? A sixth question is legal process: what records could be produced under a valid subpoena, warrant, discovery order, or company retention policy?"
+        },
+        {
+          "type": "heading",
+          "text": "CHATGPT AND GOOGLE APPS"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI’s Google App for ChatGPT Data Controls FAQ says connected Gmail, Calendar, and Drive data may be synced and indexed to provide the service. OpenAI says synced Google-app content is not used to train generalized models directly, subject to stated exceptions such as user feedback or content the user manually includes in a conversation. OpenAI says disconnecting the app triggers deletion of the synced index within a defined period. Users still need to understand Memory, shared chats, and what they deliberately paste into conversations. (OpenAI, “Google App”)"
+        },
+        {
+          "type": "heading",
+          "text": "GOOGLE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google’s privacy framework describes automated processing across its services and separate rules for Workspace. Google does not describe Gmail as public property. Government access requires legal process governed by applicable law and Google publishes an information-requests policy. The correct privacy question is therefore not “Can Google secretly read absolutely everything?” but “What processing occurs, what human access controls exist, what product terms apply, what retention exists, and what legal demands can compel disclosure?”"
+        },
+        {
+          "type": "heading",
+          "text": "PERPLEXITY"
+        },
+        {
+          "type": "paragraph",
+          "text": "Perplexity’s documentation distinguishes consumer and Enterprise privacy. Its data-collection page says consumer users can manage AI Data Retention while Enterprise data is not used for model training. Its Gmail/Calendar and Drive connector pages describe required permissions and warn that sharing a session or space can expose answer content to people who can access it. (Perplexity)"
+        },
+        {
+          "type": "heading",
+          "text": "THE BIGGEST HUMAN ERROR"
+        },
+        {
+          "type": "paragraph",
+          "text": "The most common privacy failure is not a secret backdoor. It is scope blindness: connecting a source containing privileged, student, medical, corporate, or family information without realizing that the AI can now retrieve it in contexts the user did not anticipate. Least privilege remains the safest design principle."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 13A — OpenAI Google App Data Controls"
+        },
+        {
+          "type": "paragraph",
+          "text": "OpenAI’s official FAQ explains how connected Google app data is synced, how model-training rules apply, and how disconnection affects the indexed copy. This is the correct primary source for evaluating ChatGPT’s Gmail/Drive/Calendar connector rather than assuming that connection means public disclosure. (OpenAI)"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 13B — Perplexity data collection"
+        },
+        {
+          "type": "paragraph",
+          "text": "Perplexity’s official documentation describes AI Data Retention for personal tiers and states that Enterprise data is not used for training. Users should check current settings because product defaults and plan rules can change. (Perplexity)"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 13C — Google government requests"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google explains that government agencies seek user information through legal process and describes how it reviews demands. Privacy therefore includes a government-access layer distinct from advertising, AI training, and ordinary product operation. (Google)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://help.openai.com/en/articles/10408842-google-app-for-chatgpt-data-controls-faq"
+        },
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://www.perplexity.ai/help-center/en/articles/11564572-data-collection-at-perplexity.html"
+        },
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://policies.google.com/terms/information-requests?hl=en-US"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "slug": "chapter-14",
+      "title": "14. ATTORNEY–CLIENT PRIVILEGE IN THE PROMPT BOX",
+      "subtitle": "Confidentiality is not a magic property of “AI”; courts are examining tool settings, public sharing, purpose, counsel direction, and work-product doctrine",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A lawyer can lose confidentiality by disclosing secrets to a third party. But not every AI-assisted legal workflow automatically destroys privilege."
+        },
+        {
+          "type": "heading",
+          "text": "THE ETHICS RULE"
+        },
+        {
+          "type": "paragraph",
+          "text": "ABA Formal Opinion 512 tells lawyers to evaluate competence, confidentiality, communication with clients, supervision, candor, and fees when using generative AI. The lawyer remains responsible for the work and for understanding whether a tool protects client information. (American Bar Association)"
+        },
+        {
+          "type": "heading",
+          "text": "HEPPNER"
+        },
+        {
+          "type": "paragraph",
+          "text": "In United States v. Heppner, a court found no confidentiality in public Claude conversations at issue in the case. The important lesson is not “AI always waives privilege.” It is that a user who chooses a public or nonconfidential mode may be disclosing information to a third party in a way inconsistent with privilege."
+        },
+        {
+          "type": "heading",
+          "text": "THE OPPOSITE RESULTS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Other 2026 decisions have protected AI-assisted litigation materials under work-product principles when they were created for litigation, at counsel’s direction, or otherwise fit doctrine. A New York court decision and a June 2026 ruling blocking a subpoena for ChatGPT records show that courts are not treating AI as automatically disqualifying."
+        },
+        {
+          "type": "heading",
+          "text": "THE PRACTICAL RULE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before privileged or protected material enters any AI system, counsel must know the contract, training policy, retention, administrative access, sharing mode, security controls, and whether the client has consented where required. Enterprise/legal-specific tools with contractual protections are legally different from public consumer chat links. The precise law remains jurisdiction- and fact-dependent."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 14A — United States v. Heppner"
+        },
+        {
+          "type": "paragraph",
+          "text": "Harvard Law Review’s 2026 discussion of Heppner highlights a court’s treatment of public Claude chats as lacking confidentiality. The case is a warning about public sharing and third-party disclosure, not a universal rule that all generative-AI research waives privilege. (Harvard Law Review)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 14B — Assini v. Hayward"
+        },
+        {
+          "type": "paragraph",
+          "text": "A New York decision addressed AI-assisted legal work and privilege/work-product questions, contributing to a developing body of doctrine in which courts examine the actual legal purpose and confidentiality circumstances rather than the label “AI.” (New York State Law Reporting Bureau)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 14C — Judge blocks subpoena for ChatGPT records"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reuters reported in June 2026 that a New York state judge blocked a subpoena seeking ChatGPT records in a lenders’ lawsuit, concluding that the material at issue was protected litigation work product. The ruling provides a direct counterexample to blanket claims that putting legal research into AI always eliminates protection. (Reuters)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 14A — United States v. Heppner",
+          "url": "https://harvardlawreview.org/blog/2026/03/united-states-v-heppner/"
+        },
+        {
+          "label": "CASE FILE 14B — Assini v. Hayward",
+          "url": "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26086.shtml"
+        },
+        {
+          "label": "CASE FILE 14C — Judge blocks subpoena for ChatGPT records",
+          "url": "https://www.reuters.com/legal/litigation/judge-blocks-subpoena-chatgpt-records-lenders-lawsuit-2026-06-15/"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "slug": "chapter-15",
+      "title": "15. iOS, APP PERMISSIONS, AND MANAGED DEVICES",
+      "subtitle": "The phone as sensor platform: location, microphone, camera, MDM, cloud backups, and privacy-preserving AI architecture",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Your phone can know where you are because you allowed an app to use location. A work-managed phone can also be governed by an administrator. Those are two different privacy problems."
+        },
+        {
+          "type": "heading",
+          "text": "PERMISSIONS"
+        },
+        {
+          "type": "paragraph",
+          "text": "iOS requires apps to request access to sensitive capabilities such as location, camera, and microphone, with user controls that can be changed later. Permission prompts are not perfect consent, but they create an auditable boundary that does not exist with invisible external cameras."
+        },
+        {
+          "type": "heading",
+          "text": "MDM"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mobile Device Management allows organizations to configure and secure managed devices. Apple’s documentation distinguishes normal device management from supervised or managed states. Administrators can enforce settings and restrictions; some exceptional location capabilities are tied to managed lost-mode functions rather than continuous secret tracking by default."
+        },
+        {
+          "type": "heading",
+          "text": "CLOUD"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cloud backup creates a second copy of device data. Apple’s Advanced Data Protection can extend end-to-end encryption to more iCloud categories, meaning even Apple cannot decrypt those protected categories. Users must understand what is and is not covered and the recovery consequences."
+        },
+        {
+          "type": "heading",
+          "text": "AI ARCHITECTURE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple’s Private Cloud Compute is an architectural attempt to process some AI requests in cloud systems designed to minimize provider access and permit technical verification. Whether one accepts Apple’s privacy claims or not, the design illustrates a crucial policy point: AI does not require one universal surveillance model. Systems can be engineered around data minimization, on-device processing, limited retention, and cryptographic control."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 15A — Apple location privacy controls"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple documents how users can review and change which apps access Location Services and when. This is the practical difference between an app that needs GPS for a task and an app granted persistent background access. (Apple)"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 15B — Device management security"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple’s platform security guide describes MDM capabilities and boundaries. For students and workers, the crucial distinction is ownership and management status: a personal phone and a supervised enterprise phone do not create the same expectations. (Apple)"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 15C — Advanced Data Protection"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apple’s Advanced Data Protection documentation explains expanded end-to-end encryption for iCloud. Encryption changes who can technically access stored cloud content even under ordinary service operation, although endpoint compromise and user sharing remain separate risks. (Apple)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://support.apple.com/en-us/102515"
+        },
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://support.apple.com/guide/security/device-management-security-overview-sec013b5d35d/web"
+        },
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://support.apple.com/en-us/102651"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "slug": "chapter-16",
+      "title": "16. WAZE AND THE DIFFERENCE BETWEEN LOCATION DATA AND BIOMETRICS",
+      "subtitle": "Navigation traces can be exquisitely sensitive without being biometric identifiers",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A route is not your fingerprint. But enough routes can reveal where you live, work, worship, sleep, and seek care."
+        },
+        {
+          "type": "heading",
+          "text": "THE CORRECTION THAT MATTERS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Waze is best understood primarily as a location and route-data privacy issue under its current published terms, not as a facial/iris biometric system. Its terms explain that detailed location and route information is necessary for core navigation features. Calling every sensitive signal “biometric” hides important legal differences."
+        },
+        {
+          "type": "heading",
+          "text": "WHY LOCATION CAN BE MORE REVEALING THAN A NAME"
+        },
+        {
+          "type": "paragraph",
+          "text": "A month of navigation can reveal a home address, work schedule, school drop-off, medical visits, religious attendance, romantic relationships, political events, and vacations. Even pseudonymous location histories can often become identifiable because homes and workplaces are distinctive."
+        },
+        {
+          "type": "heading",
+          "text": "AI INFERENCE"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI can turn trajectories into labels. The person never typed “I attend this church” or “I am receiving this medical treatment.” A model can infer it from repeated visits. This is why privacy law increasingly focuses on derived data and sensitive inferences, not only what a person explicitly disclosed."
+        },
+        {
+          "type": "heading",
+          "text": "STUDENT RULE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use precise language: biometric data identifies or authenticates through bodily or behavioral characteristics; location data describes where a device or person was. Both can be sensitive. They trigger different laws and technical safeguards."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 16A — Waze Terms of Use"
+        },
+        {
+          "type": "paragraph",
+          "text": "Waze’s July 2026 terms state that some features use detailed location and route information, including GPS signals and information sent by the device. The terms provide a primary-source foundation for analyzing navigation privacy without inventing unsupported biometric claims. (Waze)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://www.waze.com/nl/legal/tos"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "slug": "chapter-17",
+      "title": "17. WHY YOU CANNOT SIMPLY “BLOCK SPAM”",
+      "subtitle": "Caller-ID spoofing, STIR/SHAKEN, rotating numbers, international routing, AI voices, and the economics of fraud",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Blocking one fake number is like locking one door after the thief changes masks and enters through another."
+        },
+        {
+          "type": "heading",
+          "text": "THE FUNDAMENTAL PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "The telephone network was designed for interoperability and connection, not modern adversarial identity proof. Caller ID can be spoofed. Scammers can rotate numbers, impersonate local exchanges, and use VoIP infrastructure across jurisdictions. A block list of individual numbers therefore struggles against an attacker who can cheaply generate new apparent identities."
+        },
+        {
+          "type": "heading",
+          "text": "STIR/SHAKEN"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FCC’s STIR/SHAKEN framework helps carriers authenticate caller-ID information and assign trust to call origin. It is a major improvement, but authentication of a number is not proof that the caller is honest, nor does every call path provide perfect attestation. Fraud prevention still depends on carrier analytics, traceback, enforcement, and user behavior."
+        },
+        {
+          "type": "heading",
+          "text": "AI VOICE"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 2024 the FCC ruled that AI-generated voices fall within the Telephone Consumer Protection Act’s restrictions on artificial or prerecorded voice calls. AI makes fraud more persuasive because a scammer can synthesize a familiar voice, adapt scripts, translate at scale, and personalize a call using leaked data."
+        },
+        {
+          "type": "heading",
+          "text": "WHY THE DO-NOT-CALL LIST CANNOT STOP CRIMINALS"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FTC explains that the National Do Not Call Registry is designed to constrain legitimate telemarketers; scammers who are already breaking the law do not respect the list. Caller ID spoofing also means the number on the screen may belong to an innocent third party."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 17A — FCC call authentication"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FCC explains STIR/SHAKEN as a caller-ID authentication framework that helps phone companies verify whether caller-ID information matches the originating number. It raises the cost of spoofing but does not make every displayed identity trustworthy. (Federal Communications Commission)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 17B — AI-generated voices covered by the TCPA"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FCC ruled in February 2024 that current AI voice-cloning technologies fall within restrictions on artificial or prerecorded voices. The ruling gave regulators an existing legal hook for a new technical threat. (Federal Communications Commission)"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY POLICY 17C — FTC robocall guidance"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FTC warns consumers not to trust caller ID because scammers can fake both names and numbers. The agency also explains why call-blocking tools reduce, but cannot eliminate, illegal calls. (Federal Trade Commission)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://www.fcc.gov/call-authentication"
+        },
+        {
+          "label": "CASE FILE 17B — AI-generated voices covered by the TCPA",
+          "url": "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal"
+        },
+        {
+          "label": "CASE FILE 17B — AI-generated voices covered by the TCPA",
+          "url": "https://consumer.ftc.gov/articles/robocalls"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "slug": "chapter-18",
+      "title": "18. LARRY ELLISON AND THE “BEST BEHAVIOR” THEORY OF SOCIETY",
+      "subtitle": "Oracle, AI-supervised camera feeds, police video, and the ideological argument for ubiquitous recording",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  One vision of surveillance says people behave better when they know a machine is always watching. A democracy must ask what else people stop doing when they know that."
+        },
+        {
+          "type": "heading",
+          "text": "THE VISION"
+        },
+        {
+          "type": "paragraph",
+          "text": "At Oracle’s 2024 Financial Analyst Meeting, co-founder Larry Ellison described a future in which AI continuously analyzes police body cameras and other video. He said citizens would be on their “best behavior” because activity would be constantly recorded and reported. Oracle presents AI video analysis as a route to accountability and operational efficiency. (Oracle)"
+        },
+        {
+          "type": "heading",
+          "text": "THE CIVIL-LIBERTIES REPLY"
+        },
+        {
+          "type": "paragraph",
+          "text": "Deterrence is not the only behavioral effect of observation. Continuous monitoring can also deter lawful dissent, experimentation, private association, sexuality, religious practice, anonymous help-seeking, and ordinary eccentricity. “Best behavior” can become “most conforming behavior.”"
+        },
+        {
+          "type": "heading",
+          "text": "THE POWER ASYMMETRY"
+        },
+        {
+          "type": "paragraph",
+          "text": "If citizens are transparent to institutions while algorithms, query logs, retention rules, and watchlists remain opaque to citizens, surveillance is not reciprocal accountability. The monitored person cannot see who searched them, why, what inference was generated, or how to correct it."
+        },
+        {
+          "type": "heading",
+          "text": "THE FUTURE STORY"
+        },
+        {
+          "type": "paragraph",
+          "text": "The important future question is not whether Oracle personally runs a national citizen database. It is whether the Ellison model becomes the default architecture across police bodycams, traffic cameras, retail cameras, drones, schools, workplaces, and smart glasses: continuous capture plus centralized AI interpretation."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "paragraph",
+          "text": "PRIMARY SOURCE 18A — Oracle Financial Analyst Meeting 2024"
+        },
+        {
+          "type": "paragraph",
+          "text": "Oracle’s own event is the primary source for Ellison’s remarks about AI monitoring of police video and public behavior. Students should watch the original remarks and compare them with civil-liberties reporting rather than relying only on viral excerpts. (Oracle)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 18B — 404 Media analysis"
+        },
+        {
+          "type": "paragraph",
+          "text": "404 Media examined Ellison’s surveillance vision and connected it to existing technologies rather than treating it as remote science fiction. The article is valuable as a critical secondary source to compare against Oracle’s primary presentation. (404 Media)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "DOCUMENTED CASE FILES",
+          "url": "https://www.oracle.com/events/financial-analyst-meeting-2024/"
+        },
+        {
+          "label": "CASE FILE 18B — 404 Media analysis",
+          "url": "https://www.404media.co/larry-ellisons-ai-powered-surveillance-dystopia-is-already-here/"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "slug": "chapter-19",
+      "title": "19. SURVEILLANCE CAPITALISM: WHEN PERSONAL DATA CHANGES THE PRICE, THE FEED, AND THE CHOICE",
+      "subtitle": "Advertising, profiling, surveillance pricing, recommender systems, and behavioral extraction",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Surveillance does not always end with police at the door. Sometimes it ends with a different price, a different advertisement, a different loan offer, or a different version of reality."
+        },
+        {
+          "type": "heading",
+          "text": "COMMERCIAL POWER"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Federal Trade Commission’s 2024 study of major social-media and video companies found extensive collection, retention, and monetization of personal data. The important democratic insight is that private surveillance can shape autonomy even without government involvement."
+        },
+        {
+          "type": "heading",
+          "text": "SURVEILLANCE PRICING"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FTC’s 2025 surveillance-pricing study found that intermediaries can use a broad range of personal data and behavioral signals to help set individualized prices or promotions. A system may therefore treat privacy not merely as confidentiality but as economic leverage."
+        },
+        {
+          "type": "heading",
+          "text": "AI MAKES PROFILES GENERATIVE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Older ad systems placed people into fixed segments. Modern AI can synthesize a richer, probabilistic story: likely interests, income, health concerns, susceptibility, relationship status, urgency, or willingness to pay. Inferences can be powerful even when incorrect."
+        },
+        {
+          "type": "heading",
+          "text": "THE CONSENT PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "A privacy policy is not the same as meaningful understanding. People click through thousands of words to access essential services. Even valid contractual consent may fail the democratic test of whether individuals genuinely understand the downstream ecosystem of brokers, advertisers, analytics vendors, and AI processors."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 19A — FTC report on social-media surveillance"
+        },
+        {
+          "type": "paragraph",
+          "text": "In September 2024 the FTC published a staff report describing extensive surveillance practices among major social-media and video-streaming companies, including large-scale data collection and inadequate minimization. (Federal Trade Commission)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 19B — FTC surveillance-pricing study"
+        },
+        {
+          "type": "paragraph",
+          "text": "In January 2025 the FTC reported that surveillance-pricing intermediaries may use location, browser history, demographics, shopping behavior, and other signals to tailor prices or promotions. The case links privacy directly to economic power. (Federal Trade Commission)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 19A — FTC report on social-media surveillance",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-staff-report-finds-large-social-media-video-streaming-companies-have-engaged-vast-surveillance"
+        },
+        {
+          "label": "CASE FILE 19B — FTC surveillance-pricing study",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-surveillance-pricing-study-indicates-wide-range-personal-data-used-set-individualized-consumer"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "slug": "chapter-20",
+      "title": "20. THE BIOMETRICS YOU CANNOT ROTATE",
+      "subtitle": "Face, iris, fingerprints, voice, gait, palm, DNA, eye movement, typing cadence, and behavioral signatures",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  If a password leaks, you can change it. You cannot replace your face."
+        },
+        {
+          "type": "heading",
+          "text": "PHYSICAL BIOMETRICS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Common biometric identifiers include face geometry, iris patterns, fingerprints, palm or vein patterns, and DNA. These can be used for verification—“is this person who they claim to be?”—or identification—“who is this unknown person?” The second use is especially consequential in public surveillance."
+        },
+        {
+          "type": "heading",
+          "text": "BEHAVIORAL BIOMETRICS"
+        },
+        {
+          "type": "paragraph",
+          "text": "Systems can also identify or score people through voiceprints, gait, typing rhythm, touch patterns, eye movement, device handling, or other recurring behaviors. These signals are probabilistic and context-sensitive but can be fused with conventional identifiers."
+        },
+        {
+          "type": "heading",
+          "text": "THE IRREVERSIBILITY PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "Biometrics are durable. A stolen template may remain useful for years. A person cannot “reset” their iris. That is why the EU treats biometric data used for unique identification as a special category and why U.S. states such as Illinois have adopted specific biometric laws."
+        },
+        {
+          "type": "heading",
+          "text": "THE FALSE-MATCH PROBLEM"
+        },
+        {
+          "type": "paragraph",
+          "text": "A false positive in an entertainment app is annoying. A false positive in policing, immigration, employment, or airport security can lead to detention, investigation, denial, or stigma. Accuracy must therefore be evaluated not only as a percentage but in terms of base rates, demographic performance, human review, and the consequence of error."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 20A — Dutch Clearview AI enforcement"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Dutch data-protection authority imposed a major fine on Clearview AI over unlawful collection and processing of facial data. The case demonstrates the EU view that mass face scraping implicates fundamental data-protection rules even when the original photos were publicly available online. (European Data Protection Board)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 20B — Italian school biometric attendance fine"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 2025 Italy’s data-protection authority fined a high school over biometric attendance recording, illustrating the heightened legal scrutiny applied to biometric processing in education. Convenience did not erase proportionality and necessity requirements. (European Data Protection Board)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 20A — Dutch Clearview AI enforcement",
+          "url": "https://www.edpb.europa.eu/news/dutch-supervisory-authority-imposes-a-fine-on-clearview-because-of-illegal-data-collection-for_en"
+        },
+        {
+          "label": "CASE FILE 20B — Italian school biometric attendance fine",
+          "url": "https://www.edpb.europa.eu/news/national-news/2025/biometrics-attendance-recording-italian-sa-fines-high-school_en"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "slug": "chapter-21",
+      "title": "21. EUROPE VERSUS THE UNITED STATES: TWO DIFFERENT PRIVACY ARCHITECTURES",
+      "subtitle": "GDPR, EU AI Act, biometric special categories, fundamental rights, U.S. constitutional limits, sectoral statutes, and state patchworks",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Europe generally starts with a broad rule about personal data. The United States often starts by asking which sector, which state, which company, and whether the government is involved."
+        },
+        {
+          "type": "heading",
+          "text": "THE EUROPEAN MODEL"
+        },
+        {
+          "type": "paragraph",
+          "text": "The GDPR creates broad rights and duties around personal-data processing: lawful basis, purpose limitation, data minimization, access, correction, deletion in many contexts, and special treatment of sensitive categories. Biometric data used for unique identification receives heightened protection. The rules apply to private companies as well as public bodies within scope."
+        },
+        {
+          "type": "heading",
+          "text": "THE AI ACT"
+        },
+        {
+          "type": "paragraph",
+          "text": "The EU AI Act entered into force in 2024 and became broadly applicable in August 2026, with staged and amended timelines for some provisions. It bans or restricts certain AI practices and imposes obligations based on risk. Prohibited or heavily constrained areas include some forms of social scoring and certain biometric surveillance practices; high-risk systems include uses in employment and education."
+        },
+        {
+          "type": "heading",
+          "text": "THE U.S. MODEL"
+        },
+        {
+          "type": "paragraph",
+          "text": "The United States has powerful constitutional restraints on government searches and speech restrictions, plus federal sectoral laws and state statutes. But it lacks one single GDPR-equivalent federal privacy law governing most commercial personal data. Protection can therefore depend on whether data is health information under a covered HIPAA entity, education records under FERPA, communications under ECPA, biometrics under a state law, or consumer data under a state privacy statute."
+        },
+        {
+          "type": "heading",
+          "text": "WHICH IS “BETTER”?"
+        },
+        {
+          "type": "paragraph",
+          "text": "For baseline commercial data rights and biometric regulation, the EU generally provides broader horizontal protections. For limiting government searches, U.S. constitutional law can be strong where the Fourth Amendment applies. The problem in the United States is often the seam between private collection and government access—the exact seam AI and data brokers exploit."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "PRIMARY LAW 21A — GDPR rights"
+        },
+        {
+          "type": "paragraph",
+          "text": "The European Commission explains data-subject rights under the GDPR, including access, correction, deletion in qualifying circumstances, objection, restriction, and safeguards around automated processing. (European Commission)"
+        },
+        {
+          "type": "heading",
+          "text": "PRIMARY LAW 21B — EU AI Act framework"
+        },
+        {
+          "type": "paragraph",
+          "text": "The European Commission’s current framework explains the AI Act’s risk categories and implementation timeline. Students should use the consolidated regulation for exact legal text because implementation dates and amendments continued to evolve through 2026. (European Commission)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "PRIMARY LAW 21A — GDPR rights",
+          "url": "https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en"
+        },
+        {
+          "label": "PRIMARY LAW 21B — EU AI Act framework",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "slug": "chapter-22",
+      "title": "22. FOIA, PUBLIC RECORDS, ACLU, EFF, AND EPIC: HOW WE KNOW WHAT THE CAMERAS ARE DOING",
+      "subtitle": "Transparency litigation is the flashlight pointed back at surveillance systems",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  Many surveillance scandals became public because somebody asked for contracts, query logs, manuals, emails, or privacy assessments."
+        },
+        {
+          "type": "heading",
+          "text": "FOIA"
+        },
+        {
+          "type": "paragraph",
+          "text": "The federal Freedom of Information Act allows the public to request records from federal agencies, subject to exemptions. State public-records laws perform a similar role for local and state agencies. FOIA does not force a private company to turn over its own files, but public contracts, agency emails, audit logs, invoices, policies, and communications with vendors can often reveal how a system works."
+        },
+        {
+          "type": "heading",
+          "text": "EPIC"
+        },
+        {
+          "type": "paragraph",
+          "text": "EPIC has used FOIA litigation for decades to obtain records about airport body scanners, DHS behavioral-surveillance projects, biometric databases, ICE facial-recognition services, and other programs. The organization’s litigation history shows why privacy oversight often begins with technical procurement records rather than constitutional lawsuits."
+        },
+        {
+          "type": "heading",
+          "text": "EFF"
+        },
+        {
+          "type": "paragraph",
+          "text": "EFF combines public-records investigations, technical analysis, litigation, and policy advocacy. Its Flock reporting is a textbook example: audit logs and contracts reveal actual search practices that may differ from the narrow public sales pitch."
+        },
+        {
+          "type": "heading",
+          "text": "ACLU"
+        },
+        {
+          "type": "paragraph",
+          "text": "The ACLU’s privacy litigation links surveillance to First and Fourth Amendment doctrine and state constitutional protections. Its current Flock campaign, Clearview litigation, location-data cases, and immigration work show the recurring strategy: expose the capability, identify the legal injury, and force a court or legislature to draw a boundary."
+        },
+        {
+          "type": "heading",
+          "text": "THE JOURNALISM LESSON"
+        },
+        {
+          "type": "paragraph",
+          "text": "Never ask only “What does the company say its product is for?” Ask for the use policy, audit log, retention schedule, sharing list, data dictionary, training manual, warrant policy, contract amendments, breach reports, and query justifications. Surveillance power is often visible in the administrative paperwork."
+        },
+        {
+          "type": "heading",
+          "text": "DOCUMENTED CASE FILES"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 22A — EPIC v. ICE facial-recognition services"
+        },
+        {
+          "type": "paragraph",
+          "text": "EPIC pursued FOIA records about ICE’s use of facial-recognition services, including Clearview AI, after an ICE privacy assessment identified multiple risks. The case demonstrates how FOIA can surface the agency’s own risk analysis. (EPIC)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 22B — EPIC’s FOIA program"
+        },
+        {
+          "type": "paragraph",
+          "text": "EPIC’s FOIA archive documents how records litigation exposed the capabilities and retention behavior of government surveillance systems, including airport scanners. The archive is a research map for students studying federal surveillance history. (EPIC)"
+        },
+        {
+          "type": "heading",
+          "text": "CASE FILE 22C — ACLU v. Clearview AI"
+        },
+        {
+          "type": "paragraph",
+          "text": "The ACLU sued Clearview AI under Illinois biometric law, challenging mass scraping and face-recognition practices. The litigation shows how state biometric statutes can regulate private surveillance even where the federal Constitution would not directly apply to a company. (American Civil Liberties Union)"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": [
+        {
+          "label": "CASE FILE 22A — EPIC v. ICE facial-recognition services",
+          "url": "https://epic.org/documents/epic-v-ice-facial-recognition-services/"
+        },
+        {
+          "label": "CASE FILE 22B — EPIC’s FOIA program",
+          "url": "https://epic.org/issues/open-government/foia/"
+        },
+        {
+          "label": "CASE FILE 22C — ACLU v. Clearview AI",
+          "url": "https://www.aclu.org/press-releases/aclu-sues-clearview-ai"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "slug": "chapter-23",
+      "title": "23. THE FAILURE MATRIX: WHERE EACH SYSTEM CAN GO WRONG",
+      "subtitle": "Accuracy is only one failure mode",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  A surveillance system can be perfectly accurate and still be unjust. It can also be lawful and still be badly designed."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 1 — WRONG PERSON"
+        },
+        {
+          "type": "paragraph",
+          "text": "Face, plate, voice, or behavioral systems can generate false matches. The harm depends on whether a human checks the result and what happens before verification."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 2 — WRONG PURPOSE"
+        },
+        {
+          "type": "paragraph",
+          "text": "A tool bought for stolen cars becomes an abortion, immigration, protest, residency, or workplace-discipline tool. Mission creep is a governance failure even when no breach occurs."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 3 — WRONG AUDIENCE"
+        },
+        {
+          "type": "paragraph",
+          "text": "A database intended for one agency is shared with hundreds or thousands of others. Access expansion can transform a local safety program into national surveillance."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 4 — WRONG RETENTION"
+        },
+        {
+          "type": "paragraph",
+          "text": "A useful short-lived record becomes a permanent archive. Persistence changes the meaning of capture because old behavior can be reinterpreted under new laws, new politics, or new algorithms."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 5 — WRONG INFERENCE"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI labels a pattern as suspicious, depressed, disengaged, fraudulent, extremist, or risky. The source data may be correct while the conclusion is not."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 6 — NO DUE PROCESS"
+        },
+        {
+          "type": "paragraph",
+          "text": "The subject does not know a search occurred, cannot see the algorithm or query, cannot correct the data, and cannot appeal the inference before consequences occur."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 7 — SECURITY BREACH"
+        },
+        {
+          "type": "paragraph",
+          "text": "Centralized identity and biometric stores are high-value targets. A breach can create permanent risk because the underlying identifier cannot be reset."
+        },
+        {
+          "type": "heading",
+          "text": "FAILURE 8 — CHILLING EFFECT"
+        },
+        {
+          "type": "paragraph",
+          "text": "People avoid lawful behavior because they believe it is being recorded. The damage may never appear in an arrest statistic because the speech never happened."
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": []
+    },
+    {
+      "number": 24,
+      "slug": "chapter-24",
+      "title": "24. WHAT ARTIFICIAL INTELLIGENCE ACTUALLY “WEAPONIZES”",
+      "subtitle": "AI does not abolish privacy law; it abolishes the friction that once made total surveillance impractical",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  AI makes it cheap to ask questions about millions of people that once required teams of investigators."
+        },
+        {
+          "type": "heading",
+          "text": "1. CAPTURE BECOMES AMBIENT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cameras, microphones, phones, cars, glasses, access badges, apps, and sensors generate machine-readable traces continuously."
+        },
+        {
+          "type": "heading",
+          "text": "2. IDENTITY BECOMES AUTOMATIC"
+        },
+        {
+          "type": "paragraph",
+          "text": "Face, plate, voice, iris, account, device, and location signals can be resolved to a person or household with decreasing human labor."
+        },
+        {
+          "type": "heading",
+          "text": "3. SEARCH RUNS BACKWARD"
+        },
+        {
+          "type": "paragraph",
+          "text": "Traditional investigation begins with a suspect and seeks evidence. Reverse search begins with a place, event, pattern, or description and asks which people fit. Geofence warrants, broad ALPR searches, and face search all demonstrate this inversion."
+        },
+        {
+          "type": "heading",
+          "text": "4. DATABASES BECOME CONVERSATIONAL"
+        },
+        {
+          "type": "paragraph",
+          "text": "Natural-language interfaces let users query surveillance data without learning database languages. That democratizes analysis inside organizations—and can democratize abuse unless access controls, audit logs, and warrants are strong."
+        },
+        {
+          "type": "heading",
+          "text": "5. INFERENCE CREATES NEW “FACTS”"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI generates classifications that were never directly collected: likely relationships, sensitive destinations, ideology, vulnerability, purchase intent, risk, or identity. Derived data can be more consequential than raw data."
+        },
+        {
+          "type": "heading",
+          "text": "6. MEMORY BECOMES DEFAULT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cheap storage makes deletion an intentional act rather than a technical necessity. A system that remembers forever allows old behavior to be judged under new contexts."
+        },
+        {
+          "type": "heading",
+          "text": "7. ACTION BECOMES AUTOMATED"
+        },
+        {
+          "type": "paragraph",
+          "text": "A hotlist hit, risk score, fraud alert, face match, employee score, or content classifier can trigger action before a person has meaningful review."
+        },
+        {
+          "type": "heading",
+          "text": "THE REAL THESIS"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI’s surveillance danger is not omniscience. It is administrative scalability. It lets ordinary institutions do extraordinary amounts of watching, connecting, and inferring with ordinary budgets."
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": []
+    },
+    {
+      "number": 25,
+      "slug": "chapter-25",
+      "title": "25. THE RIGHTS AND DESIGN AGENDA",
+      "subtitle": "What law, procurement, product design, and civic governance can still do",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  The future is not a choice between “no technology” and “total surveillance.” It is a choice about rules, architecture, and who has power."
+        },
+        {
+          "type": "heading",
+          "text": "WARRANTS FOR RETROSPECTIVE LOCATION"
+        },
+        {
+          "type": "paragraph",
+          "text": "Require judicial process for searching large historical location and ALPR databases when the search reconstructs a person’s movements or associations."
+        },
+        {
+          "type": "heading",
+          "text": "PURPOSE LIMITATION"
+        },
+        {
+          "type": "paragraph",
+          "text": "Write into law and contracts exactly what a surveillance system may be used for. Prohibit repurposing without a new public vote, legal basis, or judicial authorization."
+        },
+        {
+          "type": "heading",
+          "text": "SHORT RETENTION BY DEFAULT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Delete data quickly unless a specific record is preserved for a defined investigation. Retention should be measured against necessity, not storage cost."
+        },
+        {
+          "type": "heading",
+          "text": "NO SECRET SHARING"
+        },
+        {
+          "type": "paragraph",
+          "text": "Publish agency-sharing lists and require local approval before data leaves the jurisdiction. Make federal access visible rather than burying it in vendor defaults."
+        },
+        {
+          "type": "heading",
+          "text": "AUDIT EVERY SEARCH"
+        },
+        {
+          "type": "paragraph",
+          "text": "Require a reason code, user identity, timestamp, case number, and independent audits. Abuse is easier when query history is invisible."
+        },
+        {
+          "type": "heading",
+          "text": "BAN OR STRICTLY LIMIT REAL-TIME PUBLIC FACE IDENTIFICATION"
+        },
+        {
+          "type": "paragraph",
+          "text": "Remote identification of strangers in public creates a qualitatively different society from ordinary photography. If permitted at all, it should be limited to exceptional, defined circumstances with strong oversight."
+        },
+        {
+          "type": "heading",
+          "text": "BIOMETRIC MINIMIZATION"
+        },
+        {
+          "type": "paragraph",
+          "text": "Do not collect a permanent bodily identifier when a revocable credential can solve the problem. Prefer on-device matching and templates that cannot be reconstructed into raw biometrics."
+        },
+        {
+          "type": "heading",
+          "text": "WORKPLACE NOTICE AND PROPORTIONALITY"
+        },
+        {
+          "type": "paragraph",
+          "text": "Workers should know what is monitored, why, for how long, who can see it, and whether AI scores influence employment decisions. Home environments deserve heightened limits."
+        },
+        {
+          "type": "heading",
+          "text": "SCHOOL CAMERA-FREE ZONES"
+        },
+        {
+          "type": "paragraph",
+          "text": "Treat classrooms, counseling spaces, bathrooms, locker rooms, testing rooms, and confidential meetings as no-ambient-recording zones except for explicit accommodations or instructional purposes."
+        },
+        {
+          "type": "heading",
+          "text": "DATA-BROKER WARRANT RULE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Close the gap that allows agencies to buy sensitive data they would otherwise need legal process to compel."
+        },
+        {
+          "type": "heading",
+          "text": "AI CONNECTOR LEAST PRIVILEGE"
+        },
+        {
+          "type": "paragraph",
+          "text": "Connect only the folders, labels, calendars, or accounts an agent genuinely needs. Separate privileged, medical, educational, and personal stores from general-purpose AI retrieval."
+        },
+        {
+          "type": "heading",
+          "text": "A RIGHT TO AN EXPLANATION AND APPEAL"
+        },
+        {
+          "type": "paragraph",
+          "text": "When an AI inference leads to detention, discipline, denial, investigation, or a materially different price, affected people should be able to learn the basis and contest the result."
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": []
+    },
+    {
+      "number": 26,
+      "slug": "chapter-26",
+      "title": "26. THE STUDENT INVESTIGATION LAB",
+      "subtitle": "How to turn this report into evidence-based research instead of fear",
+      "transcript": [
+        {
+          "type": "paragraph",
+          "text": "IN PLAIN ENGLISH  The assignment is not “prove surveillance is evil.” The assignment is “find out exactly what the system does, who controls it, and what law applies.”"
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 1 — MAP ONE CAMERA NETWORK"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose one city. Obtain its Flock/ALPR contract, policy, retention period, sharing list, audit rules, and public meeting records. Identify what changed after purchase. Compare the sales pitch to actual permitted searches."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 2 — TEST THE AIRPORT OPT-OUT"
+        },
+        {
+          "type": "paragraph",
+          "text": "At the research level—not by disrupting security—document TSA’s published opt-out rules, airport signage, airline participation, and differences between U.S. citizens and covered non-U.S. travelers. Interview travelers about whether they understood the choice."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 3 — THE SMART-GLASSES ETHICS TRIAL"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stage a mock school-board hearing. Roles: student with disability accommodation, teacher, parent, privacy lawyer, Meta engineer, school counsel, journalist, and student recorded without consent. Draft a policy that preserves accessibility while protecting bystanders."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 4 — CONNECTOR DATA-FLOW DIAGRAM"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose ChatGPT, Gemini, or Perplexity. Draw the entire path from Gmail/Drive to the AI response: permission, indexing, retention, training policy, memory, sharing, deletion, enterprise controls, and legal process. Every arrow must link to a primary source."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 5 — PRIVILEGE MOOT COURT"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compare Heppner with 2026 cases protecting AI-assisted work product. Argue both sides of whether a hypothetical lawyer’s prompt should be privileged based on tool settings, confidentiality, purpose, and attorney direction."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 6 — BUILD THE FAILURE MODEL"
+        },
+        {
+          "type": "paragraph",
+          "text": "For one surveillance tool, construct a red-team table: false positive, abuse by authorized user, insider misuse, data breach, vendor acquisition, policy change, federal request, interstate request, political retaliation, and AI misinference. Propose one control for each."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 7 — FOIA/PUBLIC RECORDS PACKET"
+        },
+        {
+          "type": "paragraph",
+          "text": "Draft a public-records request for contracts, audit logs, search reasons, sharing partners, retention, warrants, memoranda of understanding, privacy assessments, training manuals, and complaint records. Explain which items may be exempt and why."
+        },
+        {
+          "type": "heading",
+          "text": "ASSIGNMENT 8 — “EXPLAIN IT TO A TEN-YEAR-OLD”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Create a two-page illustrated explanation of one surveillance system with no jargon: what it sees, what it remembers, what it guesses, who can ask questions of it, and how a person can challenge a mistake."
+        },
+        {
+          "type": "heading",
+          "text": "THE FINAL QUESTION"
+        },
+        {
+          "type": "paragraph",
+          "text": "A free society needs both safety and private space. Your research should end by drawing a line: which surveillance is necessary, which is proportionate, which requires a warrant, which should be opt-in, which should be forbidden, and what evidence would make you change your mind?"
+        }
+      ],
+      "questions": [
+        "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+        "Who can access the system without a judge, and what audit trail records the search?",
+        "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+        "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+      ],
+      "citations": []
+    }
+  ],
+  "matrix": [
+    "THE CROSS-SYSTEM SURVEILLANCE MATRIX",
+    "A rapid comparison for classroom use",
+    "SYSTEM | RAW SIGNAL | WHO IS OBSERVED | AI MULTIPLIER | LEGAL FAULT LINE | BEST CONTROL",
+    "Meta AI glasses | Camera, microphone, voice interactions | Bystanders + wearer | Social capture; AI analysis; face-search pairing | Context-specific; private-space laws/policies | Manufacturer etiquette + product settings",
+    "Flock ALPR | Plate, vehicle attributes, time, location | Drivers/passengers indirectly | Retrospective movement; hotlists; AI search | Warrant law contested/varies | Retention, sharing, audit logs, warrants",
+    "TSA/CBP | Face + identity/travel records | Travelers | Identity verification; entry/exit | Federal statutes/rules + privacy policy | Opt-out varies by program/status; audits",
+    "ICE/data brokers | Commercial location + identity data | Consumers/immigrants/citizens | Locate, associate, prioritize | Fourth Amendment/data-broker loophole contested | Warrant legislation, procurement limits",
+    "Employer bossware | Device activity, email, screens, location | Employees | Productivity/risk scoring | ECPA/state/employment rules | Notice, proportionality, no-home-camera rules",
+    "AI connectors | Mail/files/calendar + prompts | Account holder + third parties in data | Search/summarize/infer across sources | Contract/privacy/sector laws | Least privilege, enterprise terms, retention controls",
+    "Robocall ecosystem | Phone numbers, leaked data, cloned voice | Consumers | Impersonation/fraud at scale | TCPA, Truth in Caller ID, fraud laws | STIR/SHAKEN, traceback, filtering",
+    "Navigation apps | Precise route/location | Drivers | Pattern-of-life inference | Privacy contracts/state/federal context | Permission scope, retention, export/delete"
+  ],
+  "watchlist": [
+    "THE 2026–2030 WATCHLIST",
+    "Wearable face identification",
+    "Whether smart-glasses makers activate native stranger identification, or third-party developers route live feeds through face-search APIs.",
+    "Natural-language police search",
+    "Whether ALPR/video vendors make “describe the person/vehicle/pattern” queries routine and what warrant or policy limits follow.",
+    "National identity fusion",
+    "Whether travel biometrics, digital IDs, benefits records, tax data, health data, and commercial identity graphs become interoperable.",
+    "Agentic enforcement",
+    "Whether AI agents move from finding leads to automatically opening cases, adding people to watchlists, generating subpoenas, or dispatching officers.",
+    "Surveillance pricing",
+    "Whether personalized pricing becomes common enough that consumers need a right to know what data changed their price.",
+    "Emotion and intent inference",
+    "Whether schools and employers deploy systems that claim to infer attention, stress, deception, engagement, or threat from face, voice, or behavior.",
+    "Right to be forgotten vs permanent memory",
+    "Whether U.S. law creates stronger deletion/retention rights as AI makes old records newly searchable.",
+    "Data-broker warrant legislation",
+    "Whether Congress or courts require law enforcement to obtain a warrant for sensitive commercial data that would otherwise be constitutionally protected if compelled directly.",
+    "Audit transparency",
+    "Whether people gain rights to see when government agencies searched their face, plate, phone, or location history after an investigation ends.",
+    "Synthetic identity attacks",
+    "Whether voice cloning, face animation, and agentic scam systems overwhelm current phone, banking, and identity-verification defenses."
+  ],
+  "worksCited": [
+    "MLA-style source list. Primary law, official agency/vendor documentation, court materials, major news reporting, and civil-liberties investigations are intentionally mixed so students can compare institutional claims with adversarial scrutiny.",
+    "404 Media. “Home Depot and Lowe’s Share Data From Hundreds of AI Cameras With Cops.” 404 Media, 6 Aug. 2025. https://www.404media.co/home-depot-and-lowes-share-data-from-hundreds-of-ai-cameras-with-cops/",
+    "404 Media. “Larry Ellison’s AI-Powered Surveillance Dystopia Is Already Here.” 404 Media, 2024. https://www.404media.co/larry-ellisons-ai-powered-surveillance-dystopia-is-already-here/",
+    "American Bar Association. “ABA Issues First Ethics Guidance on Generative AI Tools.” ABA, 29 July 2024. https://www.americanbar.org/news/abanews/aba-news-archives/2024/07/aba-issues-first-ethics-guidance-ai-tools/",
+    "American Civil Liberties Union. “ACLU Sues Clearview AI.” ACLU, 28 May 2020. https://www.aclu.org/press-releases/aclu-sues-clearview-ai",
+    "American Civil Liberties Union. “DHS Is Circumventing Constitution by Buying Data It Would Normally Need a Warrant to Access.” ACLU, 12 Jan. 2026. https://www.aclu.org/news/privacy-technology/dhs-is-circumventing-constitution-by-buying-data-it-would-normally-need-a-warrant-to-access",
+    "American Civil Liberties Union. “Fight Creepy ALPR Cameras.” ACLU, 2026. https://www.aclu.org/campaigns-initiatives/get-the-flock-out",
+    "American Civil Liberties Union. “Gibson/Brown v. Mullin.” ACLU, 2026. https://www.aclu.org/cases/gibsonbrown-v-mullin",
+    "Apple. “Control the Location Information You Share on iPhone.” Apple Support, 2026. https://support.apple.com/en-us/102515",
+    "Apple. “Device Management Security Overview.” Apple Platform Security, 2026. https://support.apple.com/guide/security/device-management-security-overview-sec013b5d35d/web",
+    "Apple. “How Advanced Data Protection for iCloud Works.” Apple Support, 2026. https://support.apple.com/en-us/102651",
+    "Apple. “Privacy.” Apple, 2026. https://www.apple.com/privacy/",
+    "Associated Press. “Documents Show Federal Surveillance Operation in Minnesota Targeted Progressive Groups, Unions.” AP News, 14 Aug. 2026. https://apnews.com/article/5e6e554e79980553c3a02ca199593a7d",
+    "Associated Press. “ICE Memo Authorizes Forced Entry with Administrative Warrants.” AP News, 21 Jan. 2026. https://apnews.com/article/ice-arrests-warrants-minneapolis-trump-00d0ab0338e82341fd91b160758aeb2d",
+    "Cornell Legal Information Institute. “Carpenter v. United States.” Cornell Law School, 2018. https://www.law.cornell.edu/supremecourt/text/16-402",
+    "Cornell Legal Information Institute. “Chatrie v. United States.” Cornell Law School, 2026. https://www.law.cornell.edu/supremecourt/text/25-112",
+    "Cornell Legal Information Institute. “United States v. Jones.” Cornell Law School, 2012. https://www.law.cornell.edu/supremecourt/text/10-1259",
+    "Electronic Frontier Foundation. “Are Your Local Police Using Flock Safety ALPRs to Scan for Immigrants?.” EFF, 25 June 2026. https://www.eff.org/deeplinks/2026/06/are-your-local-police-using-flock-safety-alprs-scan-immigrants",
+    "Electronic Frontier Foundation. “Flock Safety and Texas Sheriff Claimed License Plate Search Was for a Missing Person. It Was an Abortion Investigation..” EFF, 7 Oct. 2025. https://www.eff.org/deeplinks/2025/10/flock-safety-and-texas-sheriff-claimed-license-plate-search-was-missing-person-it",
+    "Electronic Frontier Foundation. “How Cops Are Using Flock Safety’s ALPR Network to Surveil Protesters and Activists.” EFF, 20 Nov. 2025. https://www.eff.org/deeplinks/2025/11/how-cops-are-using-flock-safetys-alpr-network-surveil-protesters-and-activists",
+    "Electronic Frontier Foundation. “ICE Is Going on a Surveillance Shopping Spree.” EFF, 7 Jan. 2026. https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree",
+    "Electronic Frontier Foundation. “Lawsuit Challenges San Jose’s Warrantless ALPR Mass Surveillance.” EFF, 18 Nov. 2025. https://www.eff.org/press/releases/lawsuit-challenges-san-joses-warrantless-alpr-mass-surveillance",
+    "Electronic Frontier Foundation. “More License Plate Reader Mission Creep: School Residency Verification, Background Checks, and Noise Complaints.” EFF, 26 May 2026. https://www.eff.org/deeplinks/2026/05/more-license-plate-reader-mission-creep-school-residency-verification-background",
+    "Electronic Frontier Foundation. “Move Fast, Surveil Things.” EFF, 4 June 2026. https://www.eff.org/deeplinks/2026/06/move-fast-surveil-things",
+    "Electronic Frontier Foundation. “Report: ICE Using Palantir Tool That Feeds on Medicaid Data.” EFF, 15 Jan. 2026. https://www.eff.org/deeplinks/2026/01/report-ice-using-palantir-tool-feeds-medicaid-data",
+    "Electronic Frontier Foundation. “She Got an Abortion. So a Texas Cop Used 83,000 Cameras to Track Her Down..” EFF, 30 May 2025. https://www.eff.org/deeplinks/2025/05/she-got-abortion-so-texas-cop-used-83000-cameras-track-her-down",
+    "Electronic Privacy Information Center. “EPIC v. ICE (Facial Recognition Services).” EPIC, 2021–2026. https://epic.org/documents/epic-v-ice-facial-recognition-services/",
+    "Electronic Privacy Information Center. “Freedom of Information Act.” EPIC, 2026. https://epic.org/issues/open-government/foia/",
+    "Electronic Privacy Information Center. “Workplace Privacy.” EPIC, 2026. https://epic.org/issues/data-protection/workplace-privacy/",
+    "European Commission. “AI Act: Regulatory Framework.” European Commission, 2026. https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "European Commission. “Information for Individuals: Data Protection.” European Commission, 2026. https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en",
+    "European Data Protection Board. “Biometrics for Attendance Recording: Italian SA Fines High School.” EDPB, 2025. https://www.edpb.europa.eu/news/national-news/2025/biometrics-attendance-recording-italian-sa-fines-high-school_en",
+    "European Data Protection Board. “Dutch Supervisory Authority Imposes a Fine on Clearview Because of Illegal Data Collection for Facial Recognition.” EDPB, 2024. https://www.edpb.europa.eu/news/dutch-supervisory-authority-imposes-a-fine-on-clearview-because-of-illegal-data-collection-for_en",
+    "Federal Communications Commission. “Combating Spoofed Robocalls with Caller ID Authentication.” FCC, 2026. https://www.fcc.gov/call-authentication",
+    "Federal Communications Commission. “FCC Makes AI-Generated Voices in Robocalls Illegal.” FCC, 8 Feb. 2024. https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+    "Federal Communications Commission. “Stop Unwanted Robocalls and Texts.” FCC, 27 Feb. 2026. https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
+    "Federal Trade Commission. “FTC Staff Report Finds Large Social Media and Video Streaming Companies Have Engaged in Vast Surveillance.” FTC, 19 Sept. 2024. https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-staff-report-finds-large-social-media-video-streaming-companies-have-engaged-vast-surveillance",
+    "Federal Trade Commission. “Robocalls.” FTC Consumer Advice, 2026. https://consumer.ftc.gov/articles/robocalls",
+    "Federal Trade Commission. “Surveillance Pricing Study Indicates Wide Range of Personal Data Used to Set Individualized Consumer Prices.” FTC, 17 Jan. 2025. https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-surveillance-pricing-study-indicates-wide-range-personal-data-used-set-individualized-consumer",
+    "Google. “Government Requests for User Information.” Google, 2026. https://policies.google.com/terms/information-requests?hl=en-US",
+    "Google. “Privacy Policy.” Google, 2026. https://policies.google.com/privacy?hl=en-US",
+    "Harvard Law Review. “United States v. Heppner.” Harvard Law Review Blog, Mar. 2026. https://harvardlawreview.org/blog/2026/03/united-states-v-heppner/",
+    "Harvard Library Innovation Lab. “I-XRAY: The AI Glasses That Reveal Anyone’s Personal Details.” Harvard Law School, 29 Jan. 2025. https://lil.law.harvard.edu/events/i-xray-lunch/",
+    "International Air Transport Association. “One ID.” IATA, 2026. https://www.iata.org/en/programs/passenger/one-id/",
+    "Meta. “Privacy Settings for Ray-Ban Meta AI Glasses.” Meta, 2026. https://www.meta.com/ai-glasses/privacy/",
+    "New York State Law Reporting Bureau. “Assini v. Hayward.” New York Courts, 2026. https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26086.shtml",
+    "OpenAI. “Google App for ChatGPT Data Controls FAQ.” OpenAI Help Center, 2026. https://help.openai.com/en/articles/10408842-google-app-for-chatgpt-data-controls-faq",
+    "Oracle. “Financial Analyst Meeting 2024.” Oracle, 2024. https://www.oracle.com/events/financial-analyst-meeting-2024/",
+    "Palantir. “Correcting the Record: Response to the EFF January 15, 2026 Report on Palantir.” Palantir Blog, 27 Jan. 2026. https://blog.palantir.com/correcting-the-record-response-to-the-eff-january-15-2026-report-on-palantir-4b3a12536cd2",
+    "Perplexity. “Data Collection at Perplexity.” Perplexity Help Center, 2026. https://www.perplexity.ai/help-center/en/articles/11564572-data-collection-at-perplexity.html",
+    "Reuters. “Artificial Intelligence Tools: A Third Party by Any Other Name?.” Reuters, 24 Mar. 2026. https://www.reuters.com/legal/transactional/artificial-intelligence-tools-third-party-by-any-other-name--pracin-2026-03-24/",
+    "Reuters. “Citizens Are Tracking ICE in Real Time to Warn Migrants. Is That Legal?.” Reuters, 5 Sept. 2025. https://www.reuters.com/legal/government/citizens-are-tracking-ice-real-time-warn-migrants-is-that-legal-2025-09-04/",
+    "Reuters. “Eyes on Me: Monitoring a Way Through Employee Privacy.” Reuters, 27 Apr. 2026. https://www.reuters.com/legal/legalindustry/eyes-me-monitoring-way-through-employee-privacy--pracin-2026-04-27/",
+    "Reuters. “German Advocacy Group Lodges Criminal Complaint over Meta AI Glasses.” Reuters, 12 Aug. 2026. https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
+    "Reuters. “ICE Is Cracking Down on People Who Follow Them in Their Cars.” Reuters, 10 Feb. 2026. https://www.reuters.com/world/us/ice-is-cracking-down-people-who-follow-them-their-cars-2026-02-10/",
+    "Reuters. “Judge Blocks Subpoena for ChatGPT Records in Lenders’ Lawsuit.” Reuters, 15 June 2026. https://www.reuters.com/legal/litigation/judge-blocks-subpoena-chatgpt-records-lenders-lawsuit-2026-06-15/",
+    "Reuters. “Lawsuit Challenges ICE Ability to Enter Homes Without Warrants from U.S. Judges.” Reuters, 30 Jan. 2026. https://www.reuters.com/legal/government/lawsuit-challenges-ice-ability-enter-homes-without-warrants-us-judges-2026-01-30/",
+    "The Guardian. “AI Smartglasses: Privacy, Consent and the Risks of Covert Recording.” The Guardian, 8 Aug. 2026. https://www.theguardian.com/technology/2026/aug/08/ai-smartglasses-camera-film-privacy-consent",
+    "The Guardian. “Meta Glasses Banned from Courts in England and Wales.” The Guardian, 11 Aug. 2026. https://www.theguardian.com/technology/2026/aug/11/meta-glasses-banned-from-courts-in-england-and-wales",
+    "Transportation Security Administration. “Facial Comparison Technology.” TSA, 2026. https://www.tsa.gov/news/press/factsheets/facial-comparison-technology",
+    "U.S. Customs and Border Protection. “Biometrics Environments: Airports.” CBP, 2026. https://www.cbp.gov/travel/biometrics/environments/airports",
+    "Waze. “Terms of Use.” Waze, 8 July 2026. https://www.waze.com/nl/legal/tos",
+    "World. “World ID.” World, 2026. https://world.org/world-id",
+    "SOURCE DISCIPLINE",
+    "•  Primary sources outrank commentary for what a company, agency, statute, or court actually says. Secondary reporting is used to establish incidents, disputes, and facts developed through records or interviews.",
+    "•  Advocacy organizations such as ACLU, EFF, and EPIC are treated as expert civil-liberties sources, not neutral arbiters. Their claims are framed as claims and paired with primary materials or countervailing sources when material.",
+    "•  Legal disputes that remain active are described as allegations, challenges, policies, or rulings at the current procedural stage. No pending lawsuit is presented as a final constitutional holding.",
+    "•  Product settings and policies can change. Students should open the live URL and record the access date before relying on any privacy setting, opt-out mechanism, retention period, or AI-training rule.",
+    "The pages that follow contain a raw source stack for direct import into research tools. The stack intentionally contains no annotations.",
+    "https://apnews.com/article/5e6e554e79980553c3a02ca199593a7d",
+    "https://apnews.com/article/ice-arrests-warrants-minneapolis-trump-00d0ab0338e82341fd91b160758aeb2d",
+    "https://www.aclu.org/campaigns-initiatives/get-the-flock-out",
+    "https://www.aclu.org/news/privacy-technology/dhs-is-circumventing-constitution-by-buying-data-it-would-normally-need-a-warrant-to-access",
+    "https://www.apple.com/privacy/",
+    "https://www.law.cornell.edu/supremecourt/text/16-402",
+    "https://www.law.cornell.edu/supremecourt/text/25-112",
+    "https://www.law.cornell.edu/supremecourt/text/10-1259",
+    "https://www.eff.org/deeplinks/2025/11/how-cops-are-using-flock-safetys-alpr-network-surveil-protesters-and-activists",
+    "https://www.eff.org/deeplinks/2026/01/report-ice-using-palantir-tool-feeds-medicaid-data",
+    "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
+    "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-staff-report-finds-large-social-media-video-streaming-companies-have-engaged-vast-surveillance",
+    "https://www.meta.com/ai-glasses/privacy/",
+    "https://help.openai.com/en/articles/10408842-google-app-for-chatgpt-data-controls-faq",
+    "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
+    "https://www.reuters.com/legal/transactional/artificial-intelligence-tools-third-party-by-any-other-name--pracin-2026-03-24/",
+    "https://www.tsa.gov/news/press/factsheets/facial-comparison-technology",
+    "https://www.cbp.gov/travel/biometrics/environments/airports",
+    "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en",
+    "https://www.waze.com/nl/legal/tos",
+    "https://lil.law.harvard.edu/events/i-xray-lunch/",
+    "https://www.eff.org/deeplinks/2026/06/move-fast-surveil-things",
+    "https://www.theguardian.com/technology/2026/aug/11/meta-glasses-banned-from-courts-in-england-and-wales",
+    "https://www.theguardian.com/technology/2026/aug/08/ai-smartglasses-camera-film-privacy-consent",
+    "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999%2F0934%2FSections%2F0934.03.html",
+    "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999%2F0934%2FSections%2F0934.02.html",
+    "https://www.eff.org/deeplinks/2025/10/flock-safety-and-texas-sheriff-claimed-license-plate-search-was-missing-person-it",
+    "https://www.eff.org/deeplinks/2026/06/are-your-local-police-using-flock-safety-alprs-scan-immigrants",
+    "https://www.404media.co/home-depot-and-lowes-share-data-from-hundreds-of-ai-cameras-with-cops/",
+    "https://www.eff.org/press/releases/lawsuit-challenges-san-joses-warrantless-alpr-mass-surveillance",
+    "https://www.eff.org/deeplinks/2025/05/she-got-abortion-so-texas-cop-used-83000-cameras-track-her-down",
+    "https://www.cbp.gov/newsroom/national-media-release/dhs-announces-final-rule-advance-biometric-entry/exit-program",
+    "https://world.org/world-id",
+    "https://www.iata.org/en/programs/passenger/one-id/",
+    "https://www.eff.org/deeplinks/2026/01/ice-going-surveillance-shopping-spree",
+    "https://blog.palantir.com/correcting-the-record-response-to-the-eff-january-15-2026-report-on-palantir-4b3a12536cd2",
+    "https://www.aclu.org/cases/gibsonbrown-v-mullin",
+    "https://www.reuters.com/legal/government/lawsuit-challenges-ice-ability-enter-homes-without-warrants-us-judges-2026-01-30/",
+    "https://www.reuters.com/legal/government/citizens-are-tracking-ice-real-time-warn-migrants-is-that-legal-2025-09-04/",
+    "https://www.reuters.com/world/us/ice-is-cracking-down-people-who-follow-them-their-cars-2026-02-10/",
+    "https://epic.org/issues/data-protection/workplace-privacy/",
+    "https://www.reuters.com/legal/legalindustry/eyes-me-monitoring-way-through-employee-privacy--pracin-2026-04-27/",
+    "https://www.perplexity.ai/help-center/en/articles/11564572-data-collection-at-perplexity.html",
+    "https://policies.google.com/terms/information-requests?hl=en-US",
+    "https://harvardlawreview.org/blog/2026/03/united-states-v-heppner/",
+    "https://www.nycourts.gov/reporter/current/3dseries/2026/2026_26086.shtml",
+    "https://www.reuters.com/legal/litigation/judge-blocks-subpoena-chatgpt-records-lenders-lawsuit-2026-06-15/",
+    "https://support.apple.com/en-us/102515",
+    "https://support.apple.com/guide/security/device-management-security-overview-sec013b5d35d/web",
+    "https://support.apple.com/en-us/102651",
+    "https://www.fcc.gov/call-authentication",
+    "https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal",
+    "https://consumer.ftc.gov/articles/robocalls",
+    "https://www.oracle.com/events/financial-analyst-meeting-2024/",
+    "https://www.404media.co/larry-ellisons-ai-powered-surveillance-dystopia-is-already-here/",
+    "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-surveillance-pricing-study-indicates-wide-range-personal-data-used-set-individualized-consumer",
+    "https://www.edpb.europa.eu/news/dutch-supervisory-authority-imposes-a-fine-on-clearview-because-of-illegal-data-collection-for_en",
+    "https://www.edpb.europa.eu/news/national-news/2025/biometrics-attendance-recording-italian-sa-fines-high-school_en",
+    "https://epic.org/documents/epic-v-ice-facial-recognition-services/",
+    "https://epic.org/issues/open-government/foia/",
+    "https://www.aclu.org/press-releases/aclu-sues-clearview-ai",
+    "https://www.eff.org/deeplinks/2026/05/more-license-plate-reader-mission-creep-school-residency-verification-background",
+    "https://policies.google.com/privacy?hl=en-US",
+    "https://www.americanbar.org/news/abanews/aba-news-archives/2024/07/aba-issues-first-ethics-guidance-ai-tools/",
+    "https://www.meta.com/legal/privacy-policy/",
+    "https://www.tsa.gov/biometrics-technology/evaluating-facial-identification-technology",
+    "https://www.tsa.gov/digital-id",
+    "https://www.cbp.gov/travel/biometrics/privacy-policy",
+    "https://www.gao.gov/products/gao-23-105607",
+    "https://world.org/blog/announcements/new-world-id-passport-credential-launches-access-wld-tokens",
+    "https://www.aclu.org/news/privacy-technology/palantir-deportation-roundup",
+    "https://www.washingtonpost.com/technology/interactive/2026/ice-surveillance-immigrants-protesters/",
+    "https://www.brennancenter.org/our-work/analysis-opinion/dhs-warrantless-home-entry-memos-fourth-amendment-problem",
+    "https://www.theguardian.com/us-news/2026/aug/13/us-government-spied-anti-ice-protesters",
+    "https://www.aclu.org/press-releases/aclu-applauds-important-supreme-court-decision-making-clear-location-data-is-protected-by-fourth-amendment",
+    "https://knightcolumbia.org/cases/chatrie-v-united-states",
+    "https://www.reuters.com/business/world-at-work/canadian-workers-have-few-protections-against-workplace-surveillance-td-starts-2026-06-25/",
+    "https://help.openai.com/en/articles/11487775-connectors-in-chatgpt",
+    "https://help.openai.com/en/articles/10847137-chatgpt-apps-with-sync",
+    "https://help.openai.com/en/articles/7730893-data-controls-faq",
+    "https://support.google.com/docs/answer/14615114?hl=en",
+    "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar.html",
+    "https://www.perplexity.ai/help-center/en/articles/12870620-connecting-perplexity-with-google-drive.html",
+    "https://support.apple.com/en-us/102291",
+    "https://security.apple.com/blog/private-cloud-compute/",
+    "https://consumer.ftc.gov/articles/national-do-not-call-registry-faqs",
+    "https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/01/ai-companies-uphold-your-privacy-confidentiality-commitments",
+    "https://www.edpb.europa.eu/sme/learn-the-basics/data-protection-basics_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A02024R1689-20260727",
+    "https://epic.org/is-opm-more-interested-in-surveillance-than-privacy-our-lawsuit-is-trying-to-answer-that/",
+    "https://epic.org/documents/epic-v-dhs-fast-program/",
+    "https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/02/ai-other-companies-quietly-changing-your-terms-service-could-be-unfair-or-deceptive",
+    "https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/flocks-terms-and-conditions",
+    "https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/flock-roundup",
+    "https://www.eff.org/deeplinks/2025/09/eff-urges-virgina-court-appeals-require-search-warrants-access-alpr-databases",
+    "https://www.eff.org/deeplinks/2026/03/think-twice-buying-or-using-metas-ray-bans"
+  ],
+  "universalQuestions": [
+    "What information existed before AI, and what new power comes only from aggregation, search, or inference?",
+    "Who can access the system without a judge, and what audit trail records the search?",
+    "What would a person have to do to opt out, correct an error, or discover that they were searched?",
+    "What is the narrowest rule that preserves legitimate safety or utility without creating a permanent behavioral dossier?"
+  ]
+}

@@ -34,6 +34,7 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: "IBM Plex Sans", Arial, sans-serif; }
 button, input { font: inherit; }
+textarea { font-family: "IBM Plex Sans", Arial, sans-serif; }
 button { cursor: pointer; }
 button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid #E8A33D; outline-offset: 4px; }
 
@@ -43,4 +44,91 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid 
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+@media print {
+  header, nav, button, textarea, details, #student-paper { display: none !important; }
+  body, main { background: white !important; color: black !important; }
+  article { break-inside: avoid; }
+}
+
+/* Arc-level dossier system: every sixth chapter is a larger editorial threshold rather than another identical transcript card. */
+main#top > section:first-child::after {
+  content: "";
+  position: absolute;
+  right: clamp(1.5rem, 7vw, 8rem);
+  top: 7rem;
+  z-index: 1;
+  height: clamp(6rem, 13vw, 12rem);
+  width: clamp(6rem, 13vw, 12rem);
+  border: 2px solid rgba(232, 163, 61, 0.88);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 20px rgba(9, 16, 24, 0.32);
+  pointer-events: none;
+}
+
+main#top > section:first-child::before {
+  content: "PUBLIC / PRIVATE\A FIELD DOSSIER";
+  white-space: pre;
+  position: absolute;
+  right: clamp(1.9rem, 7.5vw, 8.5rem);
+  top: calc(7rem + clamp(3rem, 6.5vw, 6rem));
+  z-index: 2;
+  color: #E8A33D;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  line-height: 1.8;
+  text-align: center;
+  pointer-events: none;
+}
+
+#reader + section > article > div:first-child > div { z-index: 2; }
+
+#reader + section > article:nth-child(6n + 1) > div:first-child {
+  min-height: 520px;
+  border-top: 4px solid #E8A33D;
+}
+
+#reader + section > article:nth-child(6n + 1) > div:first-child::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 12px clamp(1.25rem, 6vw, 5rem);
+  background: #05090E;
+  color: #E8A33D;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#reader + section > article:nth-child(1) > div:first-child::after { content: "Course arc 01 / a camera sees a moment. A system remembers a life."; }
+#reader + section > article:nth-child(7) > div:first-child::after { content: "Course arc 02 / identity becomes an infrastructure, not just a credential."; }
+#reader + section > article:nth-child(13) > div:first-child::after { content: "Course arc 03 / private systems can create public consequences."; }
+#reader + section > article:nth-child(19) > div:first-child::after { content: "Course arc 04 / the question is not only what technology can do, but who controls it."; }
+#reader + section > article:nth-child(25) > div:first-child::after { content: "Final arc / rights, design, and evidence can still redraw the line."; }
+
+#reader + section > article:nth-child(6n + 1) > div:first-child img { object-position: center 42%; filter: saturate(0.86) contrast(1.1); }
+#reader + section > article:nth-child(6n + 3) > div:first-child img { object-position: 65% center; }
+#reader + section > article:nth-child(6n + 5) > div:first-child img { object-position: 38% center; }
+
+#reader + section > article:nth-child(6n + 1) .chapter-transcript > h3:first-child::before {
+  content: "Dossier opening";
+  display: block;
+  margin-bottom: 1rem;
+  color: #E8A33D;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  main#top > section:first-child::after,
+  main#top > section:first-child::before { display: none; }
+  #reader + section > article:nth-child(6n + 1) > div:first-child { min-height: 410px; }
+  #reader + section > article:nth-child(6n + 1) > div:first-child::after { font-size: 8px; line-height: 1.45; }
 }

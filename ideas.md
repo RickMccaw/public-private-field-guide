@@ -63,3 +63,18 @@ The mark is a **split aperture / open eye**: a black circular lens bisected by a
 - The **split aperture / open-eye mark** recurs in the header, footer, and evidence bands as a visible dossier instrument rather than a minor decorative logo.
 - Research navigation uses **case-file and archive language**—evidence tabs, filing marks, index rows, and threshold bands—instead of rounded SaaS-style filter chips.
 - Black **evidence bands** punctuate key transitions with concise, news-crawl-like statements that make the report’s central claims memorable.
+
+## Classroom Blog Extension
+
+The site becomes a **single-page, full-text seminar reader** rather than a report overview. A persistent top bar contains a chapter jump menu, a chapter search field, and a “My paper” counter; every chapter is an anchored module with a hero image, headline, complete transcript, source links, and open-response prompts at its conclusion.
+
+The reading experience uses a “read → investigate → write → synthesize” cadence. A slim lower page navigation returns learners to the chapter index and paper workspace, while local response fields collect an evolving student portfolio that can be exported as a clean printable paper.
+
+For a 16-week course, the visual course path will group chapters into four arcs: **Foundations and ambient capture**, **movement and enforcement**, **private systems and AI**, and **rights, oversight, and investigation**. Citation links remain visibly attached to their relevant case files and are gathered again in a final source appendix.
+
+## Style Decisions — Classroom Reader Review
+
+- Every course arc begins as a **larger dossier spread** with a full-height documentary photograph and a black evidence band carrying a concise research claim; ordinary chapters retain the seminar-reader module.
+- Chapter photographs are treated as **documentary evidence**, with intentional crops and higher contrast at arc thresholds, not as generic atmospheric headers.
+- The **split aperture mark** and the gold signal line are primary orientation devices in the hero, reader navigation, chapter thresholds, and footer.
+- The reading hierarchy distinguishes five moments at a glance: report, evidence, transcript, prompt, and source archive.
